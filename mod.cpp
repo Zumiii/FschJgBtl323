@@ -1,0 +1,12 @@
+name = "Fallschirmjägerbattalion 323 Interna 0.0.0";
+picture = "logo_323_ca.paa";
+actionName = "FschJgBtl 323";
+action = "https://www.fallschirmjgbtl-323.de";
+description = "Fallschirmjägerbattalion 323 Interna - Version 0.0.0";
+logo = "logo_323_ca.paa";
+logoOver = "logo_323_ca.paa";
+tooltip = "FschJgBtl 323";
+tooltipOwned = "FschJgBtl 323 Owned";
+overview = "Dies ist der interne Mod des FschJgBtl 323. Verantwortlich für die Bearbeitung ist der S4";
+author = "Zumi";
+overviewPicture = "logo_323_ca.paa";
