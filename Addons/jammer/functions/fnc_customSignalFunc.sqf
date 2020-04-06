@@ -9,7 +9,7 @@ private _count = (missionNamespace getVariable [_transmitterClass + "_running_co
 if (_count == 0) then {
     private _rxAntennas = [_receiverClass] call EFUNC(sys_components,findAntenna);
     private _txAntennas = [_transmitterClass] call EFUNC(sys_components,findAntenna);
-    _mWnew = [acre_player, _mW, _f] call zumi_fnc_calculate_power;
+    _mWnew = [acre_player, _mW, _f] call FUNC(calculate_power);
     {
         private _txAntenna = _x;
         {

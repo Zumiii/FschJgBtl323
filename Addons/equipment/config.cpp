@@ -4,7 +4,8 @@ class CfgPatches {
   class ADDON {
     name = COMPONENT_NAME;
     units[] = {
-
+      GVAR(funker_rucksack),
+      GVAR(weaponHolder)
     };
     weapons[] = {
 

@@ -45,17 +45,17 @@ _placeHolder setVelocity [5*(sin (getDir _shell)), 5*(cos (getDir _shell)), 3];
         {
           params ["_schlauch", "_shell", "_placeholder", "_kiste", "_smoke"];
           _minen = [];
-          //_cutters = [];
+          _cutters = [];
           for "_i" from 0 to (_placeHolder distance2d _shell) step 10 do {
             private _mine = createMine ["Apersmine", _shell getPos [-_i, [_placeHolder, _shell] call bis_fnc_dirTo], [], 0];
             private _cutter = createVehicle ["Land_ClutterCutter_large_F", _shell getPos [-_i, [_placeHolder, _shell] call bis_fnc_dirTo], [], 0, "CAN_COLLIDE"];
             _minen pushBack _mine;
-            //_cutters pushBack _cutter;
-            //[_mine, [0,0,-_i]] ropeAttachTo _schlauch;
+            _cutters pushBack _cutter;
+            [_mine, [0,0,-_i]] ropeAttachTo _schlauch;
             _mine setVectorUp surfaceNormal (position _mine);
 
           };
-          //{_x ropeDetach _schlauch;} forEach _minen;
+          {_x ropeDetach _schlauch;} forEach _minen;
           {deletevehicle _x;} forEach _cutters;
           //Alle in der Nähe auch zünden
           {

@@ -9,7 +9,6 @@ if isServer then {
 
 if (hasInterface) then {
 
-  stosa_bahn = [];
-	bahn_nr = 0;
+	pfeift = false;
 
 };

@@ -25,7 +25,7 @@ if (isServer) then {
 		        {
 		          params ["_kiste"];
 							_smoke = createVehicle ["SmokeShell", [0,0,0], [], 0 , "CAN_COLLIDE"];
-		          [_kiste, _smoke, _p] remoteExeccall ["zumi_fnc_zuendung", _kiste];
+		          [_kiste, _smoke, _p] remoteExeccall ["fjb_323_miclic_fnc_zuendung", _kiste];
 
 		        },
 		        [_t],
@@ -42,7 +42,7 @@ if (isServer) then {
 			  true,
 				true
 			] call CBA_fnc_progressBar;
-	},{!(_target getVariable ["zumi_gezuendet", false]) && ("murshun_cigs_lighter" in (magazines _player)) && ([_target] call zumi_fnc_kann_feuern)}, {}, [], [0,0,0], 2] call zumi_fnc_interaction_create;
+	},{!(_target getVariable ["zumi_gezuendet", false]) && ("murshun_cigs_lighter" in (magazines _player)) && ([_target] call FUNC(kann_feuern))}, {}, [], [0,0,0], 2] call zumi_fnc_interaction_create;
 
 	["zumi_interaction_add_to_class", ["Box_IED_Exp_F", _MICLIC, 0, ["ACE_MainActions"], true]] call CBA_fnc_globalEventJIP;
 

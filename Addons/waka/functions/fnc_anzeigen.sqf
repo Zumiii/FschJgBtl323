@@ -24,4 +24,4 @@ lbSort [_liste, "ASC"];
 _liste lbsetCursel 0;
 
 
-[] call zumi_fnc_waka_updaten;
+[] call FUNC(updaten);

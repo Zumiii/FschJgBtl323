@@ -128,7 +128,7 @@ if !(_gross) then {
   _player setPos _pos;
   _dixie animatesource ["Door_1_sound_source", 0];
   _player setVariable ["kackt", true];
-  [_player, _dixie, true] call zumi_fnc_furz;
+  [_player, _dixie, true] call FUNC(furz);
   [
     300,
     [_dixie,  _player, _gross],

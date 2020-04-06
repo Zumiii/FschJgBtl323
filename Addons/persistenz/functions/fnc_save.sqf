@@ -21,7 +21,7 @@ private _inidbi = ["new", "takistan"] call OO_INIDBI;
         getPlayerUID _spieler,
         [
           //LOADOUT
-          [_spieler] call zumi_fnc_getUnitLoadout,
+          [_spieler] call EFUNC(main,getUnitLoadout_acre),
           //MEDIZINISCHES
           [
             _spieler getVariable ["isDeadPlayer", false],

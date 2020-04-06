@@ -25,5 +25,5 @@ _nr = ["Nummer","Nummer prüfen","\A3\ui_f\data\igui\cfg\simpleTasks\types\searc
   params ["_t","_p","_actionparams"];
   _actionparams params ["_nr"];
   hint format ["Das ist Scheibe nummer %1", _nr];
-  },{true},{},[count klappziele],[0,0,-0.5], 2] call zumi_fnc_interaction_create;
+  },{true},{},[count klappziele],[0,0,-0.5], 2] call EFUNC(interactions,interaction_create);
 ["zumi_interaction_add_to_object", [_scheibe, _nr, 0, []]] call CBA_fnc_globalEventJIP;

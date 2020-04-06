@@ -29,7 +29,7 @@ if (_delete) exitWith {
   if (lbSize _setup > 0) then {
     _setup lbSetSelected [(_index - 1) max 0, true];
   };
-  [] call zumi_fnc_klappziele_updaten;
+  [] call FUNC(klappziele_updaten);
 };
 
 
@@ -56,7 +56,7 @@ if (_adden) exitWith {
   _setup lbSetData [_new_index, str [_slider, _gruppen]];
   _setup lbSetSelected [_new_index, true];
 
-  buttonSetAction [2346, format ["[0, %1] remoteExecCall ['zumi_fnc_klappziele_klappen', 2];", _gruppen]];
+  buttonSetAction [2346, format ["[0, %1] remoteExecCall ['FschJgBtl323_stosa_fnc_klappziele_klappen', 2];", _gruppen]];
 
   publicVariable "klappziele";
   //lbSort [_setup, "ASC"];

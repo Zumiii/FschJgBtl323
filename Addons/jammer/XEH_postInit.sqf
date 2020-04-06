@@ -86,7 +86,7 @@ if (hasInterface) then {
     };
 	}] call CBA_fnc_addEventHandler;
 
-  [zumi_fnc_customSignalFnc] call acre_api_fnc_setCustomSignalFunc;
+  [FUNC(CustomSignalFunc)] call acre_api_fnc_setCustomSignalFunc;
 
 };
 

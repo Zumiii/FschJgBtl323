@@ -31,8 +31,7 @@ for "_i" from 0 to (count klappziele) - 1 do {
     };
   };
 };
-//lbSort [_setup, "ASC"];
-//lbSort [_ziele, "ASC"];
+
 lbSortByValue _ziele;
 lbSortByValue _setup;
 

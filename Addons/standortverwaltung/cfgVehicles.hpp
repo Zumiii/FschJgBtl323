@@ -8,7 +8,7 @@ class FlagCarrier;
 class GVAR(Flag): Flag_NATO_F {
   author = "Zumi";
   displayName = "Flaggenmast";
-  editorCategory = "vfschjgbtl323_fleck";
+  editorCategory = "fschjgbtl323_fleck";
 	editorSubCategory = "Ausbildung";
   icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
   class EventHandlers: EventHandlers {
@@ -16,6 +16,7 @@ class GVAR(Flag): Flag_NATO_F {
     class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
   };
   class ACE_Actions: ACE_Actions {
+
     class flaggenmast {
 
 			displayName = "Flagge";
@@ -24,6 +25,7 @@ class GVAR(Flag): Flag_NATO_F {
       showDisabled = 1;
       condition = "true";
 			exceptions[] = {"isNotSwimming"};
+
       class Flagge_Entfernen {
         condition = "(((flagAnimationPhase _target) == 0) && (flagTexture _target != ''))";
 				displayName = "Flagge entfernen";
@@ -78,7 +80,7 @@ class GVAR(Dixie_1): Land_FieldToilet_F {
   ace_cargo_canLoad = 1;
   ace_cargo_size = 8;
   displayName = "Dixieklo (gelb)";
-  editorCategory = "vfschjgbtl323_fleck";
+  editorCategory = "fschjgbtl323_fleck";
   editorSubCategory = "logistik";
   faction = "Bundeswehr";
   icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
@@ -95,31 +97,12 @@ class GVAR(Dixie_1): Land_FieldToilet_F {
       class klein {
         displayName = "Für kleine Jungs";
         condition = "true";
-        statement = "[_target, _player] call zumi_fnc_ablassen";
+        statement = "[_target, _player] call fjb_323_standortverwaltung_fnc_ablassen";
       };
       class gross {
         displayName = "Für grosse Jungs";
-        statement = "[_target, _player, true] call zumi_fnc_ablassen";
+        statement = "[_target, _player, true] call fjb_323_standortverwaltung_fnc_ablassen";
         condition = "true";
-      };
-    };
-    class Logistik {
-      displayName = "Logistik";
-      distance = 2;
-      position = "[0,0,0]";
-      condition = "true";
-      icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\use_CA.paa";
-      class einladen {
-        displayName = "Objekt verladen";
-        condition = "((nearestObjects [getPos _target, ['Car','Tank','Air'], 5, true]) findIf {((_x canVehicleCargo _target) select 0)} >= 0)";
-        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\upload_CA.paa";
-        statement = "[_player, _target] call zumi_fnc_verladen;";
-      };
-      class ausladen {
-        displayName = "Objekt ausladen";
-        condition = "!(isNull isVehicleCargo _target)";
-        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\download_CA.paa";
-        statement = "objNull setVehicleCargo _target;";
       };
     };
     class tuer_auf {
@@ -145,7 +128,7 @@ class GVAR(Dixie_2): Land_ToiletBox_F {
   ace_cargo_canLoad = 1;
   ace_cargo_size = 8;
   displayName = "Dixieklo (blau)";
-  editorCategory = "vfschjgbtl323_fleck";
+  editorCategory = "fschjgbtl323_fleck";
   editorSubCategory = "logistik";
   faction = "Bundeswehr";
   icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
@@ -162,31 +145,12 @@ class GVAR(Dixie_2): Land_ToiletBox_F {
       class klein {
         displayName = "Für kleine Jungs";
         condition = "true";
-        statement = "[_target, _player] call zumi_fnc_ablassen";
+        statement = "[_target, _player] call fjb_323_standortverwaltung_fnc_ablassen";
       };
       class gross {
         displayName = "Für grosse Jungs";
-        statement = "[_target, _player, true] call zumi_fnc_ablassen";
+        statement = "[_target, _player, true] call fjb_323_standortverwaltung_fnc_ablassen";
         condition = "true";
-      };
-    };
-    class Logistik {
-      displayName = "Logistik";
-      distance = 2;
-      position = "[0,0,0]";
-      condition = "true";
-      icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\use_CA.paa";
-      class einladen {
-        displayName = "Objekt verladen";
-        condition = "((nearestObjects [getPos _target, ['Car','Tank','Air'], 5, true]) findIf {((_x canVehicleCargo _target) select 0)} >= 0)";
-        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\upload_CA.paa";
-        statement = "[_player, _target] call zumi_fnc_verladen;";
-      };
-      class ausladen {
-        displayName = "Objekt ausladen";
-        condition = "!(isNull isVehicleCargo _target)";
-        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\download_CA.paa";
-        statement = "objNull setVehicleCargo _target;";
       };
     };
     class tuer_auf {

@@ -27,3 +27,4 @@ class CfgPatches {
 #include "cfgEditorSubcategories.hpp"
 #include "gui.hpp"
 #include "cfgSettings.hpp"
+#include "cfgSounds.hpp"
