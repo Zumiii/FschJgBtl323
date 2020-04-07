@@ -16,7 +16,7 @@ class CfgPatches {
 class CfgMods {
     class PREFIX {
         dir = "@fjb_323";
-        name = "FallschirmjägerBtl 323 Interna";
+        name = "FschJgbtl 323 Interna";
         picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca";
         hidePicture = "true";
         hideName = "true";

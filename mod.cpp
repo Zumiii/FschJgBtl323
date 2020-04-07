@@ -1,4 +1,4 @@
-name = "Fallschirmjägerbattalion 323 Interna 1.0.0";
+name = "FschJgBtl 323 Interna 1.0.0";
 picture = "323_ca.paa";
 actionName = "Homepage";
 action = "https://www.fallschirmjgbtl-323.de";
