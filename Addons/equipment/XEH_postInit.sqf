@@ -20,7 +20,7 @@ if (hasInterface) then {
 	player setVariable ["waffe_angehangen", _wep];
 	player removeWeapon _weapon;
 	[player] call ace_weaponselect_fnc_putWeaponAway;
-	private _wh = createVehicle ["GVAR(weaponholder)", [0,0,0], [], 0, "CAN_COLLIDE"];
+	private _wh = createVehicle ["fjb_323_equipment_weaponholder", [0,0,0], [], 0, "CAN_COLLIDE"];
 	_wh addWeaponWithAttachmentsCargoGlobal [_wep, 1];
 	_wh attachTo [player, [0.07,0.18,-0.05], "pelvis"];
 	[_wh, 285, 101, 3] remoteExecCall ['ace_common_fnc_setPitchBankYaw', _wh];
@@ -47,7 +47,7 @@ if (hasInterface) then {
 	{
 		detach _x;
 		deleteVehicle _x;
-	} forEach ((attachedObjects player) select {(typeOf _x) == "GVAR(weaponholder)"});
+	} forEach ((attachedObjects player) select {(typeOf _x) == "fjb_323_equipment_weaponholder"});
 }, {
 ""
 }, [0x02, [false, false, false], false, 0, true]] call CBA_fnc_addKeybind;
@@ -61,7 +61,7 @@ if (hasInterface) then {
 	player setVariable ["waffe_angehangen", _wep];
 	player removeWeapon _weapon;
 	[player] call ace_weaponselect_fnc_putWeaponAway;
-	private _wh = createVehicle ["GVAR(weaponholder)", [0,0,0], [], 0, "CAN_COLLIDE"];
+	private _wh = createVehicle ["fjb_323_equipment_weaponholder", [0,0,0], [], 0, "CAN_COLLIDE"];
 	_wh addWeaponWithAttachmentsCargoGlobal [_wep, 1];
 	_wh attachTo [player, [0.07,0.18,-0.05], "pelvis"];
 	[_wh, 285, 101, 3] remoteExecCall ['ace_common_fnc_setPitchBankYaw', _wh];
@@ -83,7 +83,7 @@ if (hasInterface) then {
 	{
 	  detach _x;
 	  deleteVehicle _x;
-	} forEach ((attachedObjects player) select {(typeOf _x) == "GVAR(weaponholder)"});
+	} forEach ((attachedObjects player) select {(typeOf _x) == "fjb_323_equipment_weaponholder"});
 	}, {
 	""
 	}, [0x3F, [false, false, false], false, 0, true]] call CBA_fnc_addKeybind;
