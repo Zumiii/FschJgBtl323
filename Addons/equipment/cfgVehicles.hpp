@@ -21,11 +21,9 @@ class CAManBase: Man {
    maximumLoad = 120;
    hiddenSelectionsTextures[] = {"z\fjb_323\addons\equipment\data\funkrucksack.paa"};
    scope = 2;
-   /*
    class TransportItems {
-     item_xx(ACRE_SEM70,1);
+     MACRO_ADDITEM(ACRE_SEM70,1);
    };
-   */
  };
 
  class WeaponHolder_Single_limited_weapon_F;
