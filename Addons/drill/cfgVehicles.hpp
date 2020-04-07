@@ -9,7 +9,7 @@ class CAManBase: Man {
       class ausbilder {
         condition = "true";
         displayName = "Ausbilder";
-        icon = "z\fjb_323\addons\drill\data\fschjgbtl323.paa";
+        icon = "z\fjb_323\addons\drill\data\323_ca.paa";
         class pfeifen {
           condition = "!(pfeift) && ([_player, 'fjb_323_drill_pfeife'] call ace_common_fnc_hasItem)";
           displayName = "Pfeifen";

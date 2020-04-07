@@ -34,3 +34,19 @@ class CfgVehicles {
    showWeaponCargo = true;
   };
 };
+
+class Vest_Base_F;
+class GVAR(Tragegurt_Wepholder): Vest_Base_F {
+		scope = 0;
+		scopeCurator = 0;
+    scopeArsenal = 0;
+		displayName = "Plattenträger (Flecktarn)";
+		author = "Zumi";
+		vehicleClass = "ItemsVests";
+		class TransportItems {
+			class GVAR(Tragegurt) {
+				name = "Plattenträger (Flecktarn)";
+				count = 1;
+			};
+		};
+	};

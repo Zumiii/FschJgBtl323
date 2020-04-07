@@ -4,6 +4,8 @@
 
 */
 
+#include "\z\fjb_323\addons\waka\script_component.hpp"
+
 disableSerialization;
 
 //Finde GUI
@@ -26,36 +28,18 @@ switch _val do {
     removeBackpack player;
     removeHeadgear player;
     removeGoggles player;
-    (((waffenkammer select _val) select 1) select _auswahl) params ["_text_etc", "_loadout", ["_medic", 0], ["_pio", 0], ["_eod", false],["_instruktor", false]];
+    (((WAFFENKAMMER select _val) select 1) select _auswahl) params ["_desc", "_loadout", ["_medic", 0], ["_pio", 0], ["_eod", false],["_323_ausbilder", false]];
     player setUnitLoadout [_loadout, false];
     player setVariable ["Ace_medical_medicClass", _medic, true];
     player setVariable ["ACE_isEngineer", _pio, true];
     player setVariable ["ACE_isEOD", _eod, true];
-    if (_instruktor) then {
-      player setVariable ["instruktor", true];
+    if (_323_ausbilder) then {
+      player setVariable ["323_ausbilder", true];
     };
   };
   case 1 : {
-    removeAllWeapons player;
-    removeAllItems player;
-    removeAllAssignedItems player;
-    removeUniform player;
-    removeVest player;
     removeBackpack player;
-    removeHeadgear player;
-    removeGoggles player;
-    (((waffenkammer select _val) select 1) select _auswahl) params ["_text_etc", "_loadout", ["_medic", 0], ["_pio", 0], ["_eod", false],["_instruktor", false]];
-    player setUnitLoadout [_loadout, false];
-    player setVariable ["Ace_medical_medicClass", _medic, true];
-    player setVariable ["ACE_isEngineer", _pio, true];
-    player setVariable ["ACE_isEOD", _eod, true];
-    if (_instruktor) then {
-      player setVariable ["instruktor", true];
-    };
-  };
-  case 2 : {
-    removeBackpack player;
-    _loadout = (((waffenkammer select _val) select 1) select _auswahl) select 1;
+    _loadout = (((WAFFENKAMMER select _val) select 1) select _auswahl) select 1;
     if (_loadout isEqualTo []) exitWith {};
     _loadout params ["_backpack", "_backpackitems"];
     player addBackpack _backpack;
@@ -65,16 +49,5 @@ switch _val do {
       _bp addItemCargoGlobal [_item, _count];
     } forEach _backpackitems;
   };
-  case 3 : {
-    removeBackpack player;
-    _loadout = (((waffenkammer select _val) select 1) select _auswahl) select 1;
-    if (_loadout isEqualTo []) exitWith {};
-    _loadout params ["_backpack", "_backpackitems"];
-    player addBackpack _backpack;
-    _bp = unitBackpack player;
-    {
-      _x params ["_item", "_count", "_rounds"];
-      _bp addItemCargoGlobal [_item, _count];
-    } forEach _backpackitems;
-  };
+  default {};
 };

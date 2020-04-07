@@ -5,10 +5,11 @@ class CfgPatches {
     name = COMPONENT_NAME;
     units[] = {
       GVAR(funker_rucksack),
-      GVAR(weaponHolder)
+      GVAR(weaponHolder),
+      GVAR(Tragegurt_Wepholder)
     };
     weapons[] = {
-
+      GVAR(Tragegurt)
     };
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {
