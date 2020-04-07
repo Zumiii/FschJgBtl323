@@ -1,10 +1,10 @@
 
 class FlagCarrier;
-  class Flag_NATO_F: FlagCarrier {
-      class EventHandlers;
-      class ACE_Actions;
-  };
-
+class Flag_NATO_F: FlagCarrier {
+    class EventHandlers;
+    class ACE_Actions;
+};
+class CBA_Extended_EventHandlers;
 class GVAR(Flag): Flag_NATO_F {
   author = "Zumi";
   displayName = "Flaggenmast";

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 
-if isServer then {
+if (isServer) then {
 
   zumi_frequenzen = [
 			[30,90], //VHF SEM 52SL/70/80/90
@@ -45,7 +45,7 @@ if isServer then {
  		 	[(vehicle _t)]
  	  ] call CBA_fnc_addPerFrameHandler;
 
- 	},{(([_player] call cba_fnc_vehicleRole) == "driver") && !(_target getVariable ["zumi_jamming", false]) && !(_target getVariable ["zumi_charged", false]) && (isEngineOn _target)}, {}, [], [0,0,0], 2] call zumi_fnc_interaction_create;
+ 	},{(([_player] call cba_fnc_vehicleRole) == "driver") && !(_target getVariable ["zumi_jamming", false]) && !(_target getVariable ["zumi_charged", false]) && (isEngineOn _target)}, {}, [], [0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 
  	["zumi_interaction_add_to_class", ["Redd_Tank_Fuchs_1A4_Pi_Flecktarn", _jammer_an, 1, ["ACE_SelfActions"], true]] call CBA_fnc_globalEventJIP;
 
@@ -67,7 +67,7 @@ if isServer then {
  			3
  		] call CBA_fnc_waitAndExecute;
 
- 	},{(([_player] call cba_fnc_vehicleRole) == "driver") && (_target getVariable ["zumi_jamming", false]) && !(_target getVariable ["zumi_charged", false]) && (isEngineOn _target)}, {}, [], [0,0,0], 2] call zumi_fnc_interaction_create;
+ 	},{(([_player] call cba_fnc_vehicleRole) == "driver") && (_target getVariable ["zumi_jamming", false]) && !(_target getVariable ["zumi_charged", false]) && (isEngineOn _target)}, {}, [], [0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 
  	["zumi_interaction_add_to_class", ["Redd_Tank_Fuchs_1A4_Pi_Flecktarn", _jammer_aus, 1, ["ACE_SelfActions"], true]] call CBA_fnc_globalEventJIP;
 

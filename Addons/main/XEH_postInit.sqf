@@ -6,10 +6,10 @@ if isServer then {
   _spectate = ["Zuschauen", "Zuschauen","\A3\ui_f\data\igui\cfg\simpleTasks\types\scout_ca.paa",{
 		params ["_t","_p","_actionparams"];
 		[true] call ace_spectator_fnc_setSpectator;
-	},{true}, {}, [], [0,0,0], 2] call zumi_fnc_interaction_create;
+	},{true}, {}, [], [0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 
 	["zumi_interaction_add_to_class", ["Land_MapBoard_F", _spectate, 0, ["ACE_MainActions"], true]] call CBA_fnc_globalEventJIP;
-  
+
 };
 
 if (hasInterface) then {

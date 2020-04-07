@@ -14,11 +14,10 @@ class CfgPatches {
       GVAR(airhorn)
     };
     requiredVersion = REQUIRED_VERSION;
-    requiredAddons = {
+    requiredAddons[] = {
       "ace_common"
     };
     author = "Zumi";
-    authors[] = {"Zumi"};
     url = "www.fallschirmjgbtl-323.de";
     VERSION_CONFIG;
   };
