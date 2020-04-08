@@ -56,7 +56,7 @@ if (_adden) exitWith {
   _setup lbSetData [_new_index, str [_slider, _gruppen]];
   _setup lbSetSelected [_new_index, true];
 
-  buttonSetAction [2346, format ["[0, %1] remoteExecCall ['FschJgBtl323_stosa_fnc_klappziele_klappen', 2];", _gruppen]];
+  buttonSetAction [2346, format ["[0, %1] remoteExecCall ['fjb_323_stosa_fnc_klappziele_klappen', 2];", _gruppen]];
 
   publicVariable "klappziele";
   //lbSort [_setup, "ASC"];

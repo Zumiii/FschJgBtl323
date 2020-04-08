@@ -31,7 +31,7 @@ if ((TypeOf _scheibe) isEqualTo "Land_Shoot_House_Wall_Crouch_F") then {
 
 
 //Interaktionen
-_scheibensteuerung = ["Scheibensteuerung","Scheibensteuerung","\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa",{},{true},{},[],_offset, 5] call EFUNC(interactions,interaction_create);
+_scheibensteuerung = ["Scheibensteuerung","Scheibensteuerung","\A3\ui_f\data\igui\cfg\simpleTasks\types\whiteboard_ca.paa",{},{true},{},[],_offset, 5] call fjb_323_interactions_fnc_interaction_create;
 ["zumi_interaction_add_to_object", [_steuerung, _scheibensteuerung, 0, []]] call CBA_fnc_globalEventJIP;
 
 //Klatsche die richtige Textur drauf!

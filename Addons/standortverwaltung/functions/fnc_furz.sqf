@@ -7,7 +7,7 @@ if (_start) exitWith {
     {
       params ["_p", "_d"];
       if ((isNull _p) || (isNull _d) || !(_p getVariable ["kackt", false])) exitWith {};
-      [_p, _d] call zumi_fnc_furz;
+      [_p, _d] call fjb_323_standortverwaltung_fnc_furz;
     },
     [_player, _dixie],
     5 + (ceil round random 5)
@@ -21,7 +21,7 @@ if (_start) exitWith {
   {
     params ["_p", "_d"];
     if ((isNull _p) || (isNull _d) || !(_p getVariable ["kackt", false])) exitWith {};
-    [_p, _d] call zumi_fnc_furz;
+    [_p, _d] call fjb_323_standortverwaltung_fnc_furz;
   },
   [_player, _dixie],
   5 + (ceil round random 5)

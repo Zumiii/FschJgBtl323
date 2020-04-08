@@ -9,6 +9,8 @@ if isServer then {
 
 if (hasInterface) then {
 
+	taschenkarten = [[1,7], [1,9]];
+
 	leere_waffen = [];
 
   ["323 Dreipunktgurt", "Waffe_2", ["Sekundärwaffe", "Wechsle auf Sekundärwaffe"], {

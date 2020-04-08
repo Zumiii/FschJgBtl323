@@ -6,10 +6,12 @@ class CfgPatches {
     units[] = {
       GVAR(funker_rucksack),
       GVAR(weaponHolder),
-      GVAR(Tragegurt_Wepholder)
+      GVAR(Tragegurt_Wepholder),
+      GVAR(taschenkarte_9)
     };
     weapons[] = {
-      GVAR(Tragegurt)
+      GVAR(Tragegurt),
+      GVAR(taschenkarte_9)
     };
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {
@@ -26,3 +28,4 @@ class CfgPatches {
 #include "cfgEditorSubcategories.hpp"
 #include "gui.hpp"
 #include "cfgSettings.hpp"
+#include "cfgSounds.hpp"

@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 
+zumi_jammers = [];
 
 if (isServer) then {
 

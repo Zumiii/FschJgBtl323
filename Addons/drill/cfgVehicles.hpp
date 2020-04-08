@@ -80,7 +80,7 @@ class CAManBase: Man {
 		scopeCurator = 0;
 		displayName = "Shottimer";
 		author = "Zumi";
-    picture = "z\fjb_323\addons\drill\data\shottimer.paa";
+    picture = "\z\fjb_323\addons\drill\data\shottimer.paa";
 		class TransportItems {
 			class zumi_shottimer {
 				name = "Shottimer";
@@ -95,7 +95,7 @@ class CAManBase: Man {
 		scopeCurator = 0;
 		displayName = "Pfeife";
 		author = "Zumi";
-    picture = "z\fjb_323\addons\drill\data\pfeife.paa";
+    picture = "\z\fjb_323\addons\drill\data\pfeife.paa";
 		class TransportItems {
 			class fjb_323_drill_pfeife {
 				name = "Pfeife";
@@ -110,7 +110,7 @@ class CAManBase: Man {
     scopeCurator = 0;
     displayName = "Airhorn";
     author = "Zumi";
-    picture = "z\fjb_323\addons\drill\data\airhorn.paa";
+    picture = "\z\fjb_323\addons\drill\data\airhorn.paa";
     class TransportItems {
       class fjb_323_drill_airhorn {
         name = "Airhorn";

@@ -1,5 +1,7 @@
 class TargetBootcampHuman_F;
+class CBA_Extended_EventHandlers;
 
+class cfgVehicles {
   class GVAR(T_Scheibe): TargetBootcampHuman_F {
     author = "Zumi";
 		ace_cargo_canLoad = 1;
@@ -11,7 +13,7 @@ class TargetBootcampHuman_F;
 		icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
     class EventHandlers {
 			class zumis_zusatz {
-				init = "params ['_scheibe']; _scheibe setObjectTextureGlobal [0, 'z\fjb_323\addons\stosa\data\t_scheibe.paa'];";
+				init = "params ['_scheibe']; _scheibe setObjectTextureGlobal [0, 'z\fjb_323\addons\stosa\data\t_scheibe.paa'];  [_scheibe] call fjb_323_stosa_fnc_scheibe_init;";
 			};
 		};
   };
@@ -27,9 +29,11 @@ class TargetBootcampHuman_F;
     icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
     nameSound = "obj_building";
     class EventHandlers {
-			class zumis_zusatz {
+      class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+			class GVAR(Handlers) {
 				init = "params ['_scheibe']; _scheibe setObjectTextureGlobal [0, 'z\fjb_323\addons\stosa\data\stuermender_schuetze_v3.paa']; [_scheibe] call fjb_323_stosa_fnc_scheibe_init; [_scheibe] call fjb_323_stosa_fnc_klappziele_init;";
         hit = "params ['_unit', '_source', '_damage', '_instigator']; _hits = (_unit getVariable ['hits', 0]); _unit setVariable ['hits', _hits + 1]; if ((_unit getVariable ['hits', 0]) < (_unit getVariable ['hits_required', 1])) exitWith {}; _unit animateSource ['Terc', 1]; _unit setVariable ['runtergeklappt', 0, true]; _unit setVariable ['hits', 0];";
 			};
 		};
   };
+};

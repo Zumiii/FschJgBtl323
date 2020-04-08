@@ -1,5 +1,8 @@
+class ACE_personalAidKit;
+
 class cfgWeapons {
   class V_PlateCarrier1_rgr_noflag_F;
+  class VestItem;
   class GVAR(Tragegurt): V_PlateCarrier1_rgr_noflag_F {
     author = "Zumi";
     scope = 2;
@@ -46,4 +49,22 @@ class cfgWeapons {
       };
     };
   };
+
+  class ACE_personalAidKit;
+  class GVAR(taschenkarte_9): ACE_personalAidKit {
+    author = "Zumi";
+    displayName = "Taschenkarte Nummer 9";
+    descriptionShort = "Fernmeldedienst aller Truppen";
+    model = "\A3\weapons_F\ammo\mag_univ.p3d";
+    picture = "\z\fjb_323\addons\equipment\data\tk_nr9_1.paa";
+    scope = 2;
+    class itemInfo {
+      allowedSlots[] = {701,801,901};
+      mass = 1;
+      type = 620;
+      scope = 0;
+    };
+  };
+
+
 };

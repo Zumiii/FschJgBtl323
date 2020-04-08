@@ -17,4 +17,4 @@ for "_i" from 1 to 12 do {
 };
 
 
-buttonSetAction [2346, format ["[0, %1] remoteExecCall ['FschJgBtl323_stosa_fnc_klappziele_klappen', 2];", _gruppen]];
+buttonSetAction [2346, format ["[0, %1] remoteExecCall ['fjb_323_stosa_fnc_klappziele_klappen', 2];", _gruppen]];

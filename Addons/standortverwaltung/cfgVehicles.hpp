@@ -1,10 +1,12 @@
+class CBA_Extended_EventHandlers;
+
 class cfgVehicles {
   class FlagCarrier;
   class Flag_NATO_F: FlagCarrier {
       class EventHandlers;
       class ACE_Actions;
   };
-  class CBA_Extended_EventHandlers;
+
   class GVAR(Flag): Flag_NATO_F {
     author = "Zumi";
     displayName = "Flaggenmast";
@@ -168,6 +170,62 @@ class cfgVehicles {
         icon = "\z\ace\addons\vehiclelock\ui\key_menuIcon_ca.paa";
         distance = 1;
         position = "_target selectionPosition ['Door_1_trigger','Memory'];";
+      };
+    };
+  };
+
+  class rnt_lkw_7t_mil_gl_kat_i_mun_fleck;
+  class rnt_lkw_7t_mil_gl_kat_i_mun_trope;
+
+  class GVAR(Mobile_Waka_Fleck_Base): rnt_lkw_7t_mil_gl_kat_i_mun_fleck {
+    scope = 0;
+    class EventHandlers;
+    class ACE_Actions;
+  };
+
+  class GVAR(Mobile_Waka_Trope_Base): rnt_lkw_7t_mil_gl_kat_i_mun_trope {
+    scope = 0;
+    class EventHandlers;
+    class ACE_Actions;
+  };
+
+  class GVAR(Mobile_Waka_Fleck): GVAR(Mobile_Waka_Fleck_Base) {
+    author = "Zumi";
+    displayName = "Mobile Waffenkammer (Fleck)";
+    editorCategory = "fschjgbtl323_fleck";
+  	editorSubCategory = "munition";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    scope = 2;
+    class ACE_Actions: ACE_Actions {
+      class waka {
+  			displayName = "Waffenkammer";
+  			distance = 3;
+        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\armor_ca.paa";
+        position = "[0,-6,-1]";
+        showDisabled = 1;
+        condition = "true";
+        statement = "createDialog 'waka_dialog';";
+  			exceptions[] = {"isNotSwimming"};
+      };
+    };
+  };
+  class GVAR(Mobile_Waka_Trope): GVAR(Mobile_Waka_Trope_Base) {
+    author = "Zumi";
+    displayName = "Mobile Waffenkammer (Trope)";
+    editorCategory = "fschjgbtl323_isaf";
+    editorSubCategory = "munition";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    scope = 2;
+    class ACE_Actions: ACE_Actions {
+      class waka {
+        displayName = "Waffenkammer";
+        distance = 3;
+        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\armor_ca.paa";
+        position = "[0,-6,-1]";
+        showDisabled = 1;
+        condition = "true";
+        statement = "createDialog 'waka_dialog';";
+        exceptions[] = {"isNotSwimming"};
       };
     };
   };

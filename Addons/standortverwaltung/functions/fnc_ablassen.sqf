@@ -71,7 +71,7 @@ if !(_gross) then {
       ] call cba_fnc_waitAndExecute;
       _dixie setVariable ["bis_disabled_Door_1", 0, true];
       _dixie animatesource ["Door_1_sound_source", 1];
-      [["Sie fühlen sich erleichtert!", 1, [0,1,0,1]], ["zumis_zusatz\addons\data\wc.paa", 1]] call CBA_fnc_notify;
+      [["Sie fühlen sich erleichtert!", 1, [0,1,0,1]], ["\z\fjb_323\addons\standortverwaltung\data\wc.paa", 1]] call CBA_fnc_notify;
       [_dixie, "flush", 15] call CBA_fnc_globalSay3d;
     },
     {
@@ -107,7 +107,7 @@ if !(_gross) then {
       ] call cba_fnc_waitAndExecute;
       _dixie setVariable ["bis_disabled_Door_1", 0, true];
       _dixie animatesource ["Door_1_sound_source", 1];
-      [["Das ging in die Hose!", 1, [1,0,0,1]], ["zumis_zusatz\addons\data\wc.paa", 1]] call CBA_fnc_notify;
+      [["Das ging in die Hose!", 1, [1,0,0,1]], ["\z\fjb_323\addons\standortverwaltung\data\wc.paa", 1]] call CBA_fnc_notify;
       [_dixie, "flush", 15] call CBA_fnc_globalSay3d;
     },
     "Entleere Blase...",
@@ -164,7 +164,7 @@ if !(_gross) then {
       ] call cba_fnc_waitAndExecute;
       _dixie setVariable ["bis_disabled_Door_1", 0, true];
       _dixie animatesource ["Door_1_sound_source", 1];
-      [["Sitzung beendet!", 1, [0,1,0,1]], ["zumis_zusatz\addons\data\wc.paa", 1]] call CBA_fnc_notify;
+      [["Sitzung beendet!", 1, [0,1,0,1]], ["\z\fjb_323\addons\standortverwaltung\data\wc.paa", 1]] call CBA_fnc_notify;
       _player setVariable ["kackt", false];
       [_dixie, "flush", 15] call CBA_fnc_globalSay3d;
     },
@@ -200,7 +200,7 @@ if !(_gross) then {
       ] call cba_fnc_waitAndExecute;
       _dixie setVariable ["bis_disabled_Door_1", 0, true];
       _dixie animatesource ["Door_1_sound_source", 1];
-      [["Das ging in die Hose!", 1, [1,0,0,1]], ["zumis_zusatz\addons\data\wc.paa", 1]] call CBA_fnc_notify;
+      [["Das ging in die Hose!", 1, [1,0,0,1]], ["\z\fjb_323\addons\standortverwaltung\data\wc.paa", 1]] call CBA_fnc_notify;
       _player setVariable ["kackt", false];
       [_dixie, "flush", 15] call CBA_fnc_globalSay3d;
     },
