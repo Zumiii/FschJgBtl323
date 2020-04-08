@@ -47,7 +47,7 @@ switch (TypeOf _scheibe) do {
         deleteVehicle _x;
       } forEach (attachedObjects _t);
       _t setVariable ["runtergeklappt", 0, true];
-    },{!((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+    },{!((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
     ["zumi_interaction_add_to_object", [_steuerung, _runterklappen, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
 
     _hochklappen = ["Hochklappen","Hochklappen","\A3\ui_f\data\igui\cfg\simpleTasks\types\upload_ca.paa",{
@@ -55,7 +55,7 @@ switch (TypeOf _scheibe) do {
       _actionparams params ["_s"];
       _s animateSource ["Terc", 0];
       _t setVariable ["runtergeklappt", 1, true];
-    },{((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+    },{((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
     ["zumi_interaction_add_to_object", [_steuerung, _hochklappen, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
   };
   case "stuermender_schuetze" : {
@@ -68,7 +68,7 @@ switch (TypeOf _scheibe) do {
         deleteVehicle _x;
       } forEach (attachedObjects _t);
       _t setVariable ["runtergeklappt", 0, true];
-    },{!((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+    },{!((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
     ["zumi_interaction_add_to_object", [_steuerung, _runterklappen, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
 
     _hochklappen = ["Hochklappen","Hochklappen","\A3\ui_f\data\igui\cfg\simpleTasks\types\upload_ca.paa",{
@@ -76,10 +76,10 @@ switch (TypeOf _scheibe) do {
       _actionparams params ["_s"];
       _s animateSource ["Terc", 0];
       _t setVariable ["runtergeklappt", 1, true];
-    },{((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+    },{((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
     ["zumi_interaction_add_to_object", [_steuerung, _hochklappen, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
 
-    _abklappen_nach = ["abklappen_nach","Treffer nötig: ","\A3\ui_f\data\igui\cfg\simpleTasks\types\use_ca.paa",{},{true},{},[],[0,0,0], 5] call EFUNC(interactions,interaction_create);
+    _abklappen_nach = ["abklappen_nach","Treffer nötig: ","\A3\ui_f\data\igui\cfg\simpleTasks\types\use_ca.paa",{},{true},{},[],[0,0,0], 5] call fjb_323_interactions_fnc_interaction_create;
     ["zumi_interaction_add_to_object", [_steuerung, _abklappen_nach, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
 
     _treffer_noetig_1 = ["hits_r_1","1","",{
@@ -87,7 +87,7 @@ switch (TypeOf _scheibe) do {
       _actionparams params ["_s"];
       _t setVariable ["hits", 0, true];
       _t setVariable ["hits_required", 1, true];
-    },{!((_target getVariable ["hits_required", 1]) == 1)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+    },{!((_target getVariable ["hits_required", 1]) == 1)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
     ["zumi_interaction_add_to_object", [_steuerung, _treffer_noetig_1, 0, ["Scheibensteuerung","abklappen_nach"]]] call CBA_fnc_globalEventJIP;
 
     _treffer_noetig_2 = ["hits_r_2","2","",{
@@ -95,7 +95,7 @@ switch (TypeOf _scheibe) do {
       _actionparams params ["_s"];
       _t setVariable ["hits", 0, true];
       _t setVariable ["hits_required", 2, true];
-    },{!((_target getVariable ["hits_required", 1]) == 2)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+    },{!((_target getVariable ["hits_required", 1]) == 2)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
     ["zumi_interaction_add_to_object", [_steuerung, _treffer_noetig_2, 0, ["Scheibensteuerung","abklappen_nach"]]] call CBA_fnc_globalEventJIP;
 
     _treffer_noetig_3 = ["hits_r_3","3","",{
@@ -103,7 +103,7 @@ switch (TypeOf _scheibe) do {
       _actionparams params ["_s"];
       _t setVariable ["hits", 0, true];
       _t setVariable ["hits_required", 3, true];
-    },{!((_target getVariable ["hits_required", 1]) == 3)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+    },{!((_target getVariable ["hits_required", 1]) == 3)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
     ["zumi_interaction_add_to_object", [_steuerung, _treffer_noetig_3, 0, ["Scheibensteuerung","abklappen_nach"]]] call CBA_fnc_globalEventJIP;
 
     _treffer_noetig_4 = ["hits_r_4","4","",{
@@ -111,7 +111,7 @@ switch (TypeOf _scheibe) do {
       _actionparams params ["_s"];
       _t setVariable ["hits", 0, true];
       _t setVariable ["hits_required", 4, true];
-    },{!((_target getVariable ["hits_required", 1]) == 4)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+    },{!((_target getVariable ["hits_required", 1]) == 4)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
     ["zumi_interaction_add_to_object", [_steuerung, _treffer_noetig_4, 0, ["Scheibensteuerung","abklappen_nach"]]] call CBA_fnc_globalEventJIP;
 
   };
@@ -138,16 +138,16 @@ _reset = ["Trefferbild_Reset","Treffer abkleben","\A3\ui_f\data\igui\cfg\simpleT
     detach _x;
     deleteVehicle _x;
   } forEach (attachedObjects _s);
-},{((count (attachedObjects _target)) > 0)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+},{((count (attachedObjects _target)) > 0)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 
 _sehen = ["Trefferbild_Sehen","Trefferaufnahme","\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa",{
   params ["_t","_p","_actionparams"];
   _actionparams params ["_s"];
   {["ace_common_hideObjectGlobal", [_x, false]] call CBA_fnc_serverEvent;} forEach (attachedObjects _s);
-},{(count (attachedObjects _target) > 0) && (({isObjectHidden _x} count (attachedObjects _target)) > 0)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+},{(count (attachedObjects _target) > 0) && (({isObjectHidden _x} count (attachedObjects _target)) > 0)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 
 if (_steuerung != _scheibe) then {
-  _trefferbild = ["Trefferbild","Trefferbild","\A3\ui_f\data\igui\cfg\simpleTasks\types\target_ca.paa",{},{true},{},[],[0,0,0], 5] call EFUNC(interactions,interaction_create);
+  _trefferbild = ["Trefferbild","Trefferbild","\A3\ui_f\data\igui\cfg\simpleTasks\types\target_ca.paa",{},{true},{},[],[0,0,0], 5] call fjb_323_interactions_fnc_interaction_create;
   ["zumi_interaction_add_to_object", [_scheibe, _trefferbild, 0, []]] call CBA_fnc_globalEventJIP;
   ["zumi_interaction_add_to_object", [_scheibe, _reset, 0, ["Trefferbild"]]] call CBA_fnc_globalEventJIP;
   ["zumi_interaction_add_to_object", [_scheibe, _sehen, 0, ["Trefferbild"]]] call CBA_fnc_globalEventJIP;
@@ -165,7 +165,7 @@ _anmelden = ["Anmelden","Anmelden","\A3\ui_f\data\igui\cfg\simpleTasks\types\int
   ["zumi_stosa_bahn", [_s, true], _p] call CBA_fnc_targetEvent;
   ["zumi_cba_hinweis", [["Sie haben sich auf der Schiessbahn angemeldet", 1, [0,1,0,1]]], _p] call CBA_fnc_targetEvent;
   //Spieler wird automatisch abgemeldet durch Ace bei gewissen Events
-},{isNull (_target getVariable ["ace_common_owner", objNull])},{},[_scheibe, _steuerung],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+},{isNull (_target getVariable ["ace_common_owner", objNull])},{},[_scheibe, _steuerung],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 ["zumi_interaction_add_to_object", [_steuerung, _anmelden, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
 
 _abmelden = ["Abmelden","Hier abmelden","\A3\ui_f\data\igui\cfg\simpleTasks\types\interact_ca.paa",{
@@ -180,7 +180,7 @@ _abmelden = ["Abmelden","Hier abmelden","\A3\ui_f\data\igui\cfg\simpleTasks\type
   } else {
     ["zumi_cba_hinweis", [[["\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa", 2, [1,1,1,1]], ["Sie haben sich von der Schiessbahn abgemeldet", 1, [1,1,0,1]]]]] call CBA_fnc_localEvent;
   };
-},{!(isNull (_target getVariable ["ace_common_owner", objNull]))},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+},{!(isNull (_target getVariable ["ace_common_owner", objNull]))},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 ["zumi_interaction_add_to_object", [_steuerung, _abmelden, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
 
 //Abmelden von allen Bahnen
@@ -189,5 +189,5 @@ _abmelden_alle = ["Abmelden_alle","Überall abmelden","\A3\ui_f\data\igui\cfg\si
   _actionparams params ["_s"];
   ["zumi_stosa_bahn", []] call CBA_fnc_localEvent;
   ["zumi_cba_hinweis", [[["\A3\ui_f\data\igui\cfg\simpleTasks\types\danger_ca.paa", 2, [1,1,1,1]], ["Sie haben sich von allen Schiessbahnen abgemeldet", 1, [1,1,0,1]]]]] call CBA_fnc_localEvent;
-},{!(isNull (_target getVariable ["ace_common_owner", objNull])) && ((count stosa_bahn) > 1)},{},[_scheibe],[0,0,0], 2] call EFUNC(interactions,interaction_create);
+},{!(isNull (_target getVariable ["ace_common_owner", objNull])) && ((count stosa_bahn) > 1)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 ["zumi_interaction_add_to_object", [_steuerung, _abmelden_alle, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
