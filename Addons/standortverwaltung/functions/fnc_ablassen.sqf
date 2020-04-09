@@ -128,7 +128,7 @@ if !(_gross) then {
   _player setPos _pos;
   _dixie animatesource ["Door_1_sound_source", 0];
   _player setVariable ["kackt", true];
-  [_player, _dixie, true] call FUNC(furz);
+  [_player, _dixie, true] call fjb_323_standortverwaltung_fnc_furz;
   [
     300,
     [_dixie,  _player, _gross],

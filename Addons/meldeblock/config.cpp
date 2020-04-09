@@ -4,22 +4,10 @@ class CfgPatches {
   class ADDON {
     name = COMPONENT_NAME;
     units[] = {
-      GVAR(funker_rucksack),
-      GVAR(weaponHolder),
-      GVAR(Tragegurt_Wepholder),
-      GVAR(taschenkarte_9),
-      GVAR(taschenkarte_11),
-      GVAR(fliegerzeichen_gelb_base),
-      GVAR(fliegerzeichen_rot_base),
-      GVAR(fliegerzeichen_gelb),
-      GVAR(fliegerzeichen_rot)
+      GVAR(meldeblock)
     };
     weapons[] = {
-      GVAR(Tragegurt),
-      GVAR(taschenkarte_9),
-      GVAR(taschenkarte_11),
-      GVAR(fliegerzeichen_gelb),
-      GVAR(fliegerzeichen_rot)
+
     };
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {

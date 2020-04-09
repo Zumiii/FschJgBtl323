@@ -29,7 +29,7 @@ if (_delete) exitWith {
   if (lbSize _setup > 0) then {
     _setup lbSetSelected [(_index - 1) max 0, true];
   };
-  [] call FUNC(klappziele_updaten);
+  [] call fjb_323_stosa_fnc_klappziele_updaten;
 };
 
 
