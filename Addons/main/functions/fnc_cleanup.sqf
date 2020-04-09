@@ -47,7 +47,7 @@ private _schrott = (
 
 [
 	{
-		[] call zumi_fnc_cleanup;
+		[] call fjb_323_main_fnc_cleanup;
 	},
 	[],
 	900

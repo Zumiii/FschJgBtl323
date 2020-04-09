@@ -21,7 +21,7 @@ private _inidbi = ["new", "takistan"] call OO_INIDBI;
         getPlayerUID _spieler,
         [
           //LOADOUT
-          [_spieler] call EFUNC(main,getUnitLoadout_acre),
+          [_spieler] call fjb_323_main_fnc_getUnitLoadout_acre,
           //MEDIZINISCHES
           [
             _spieler getVariable ["isDeadPlayer", false],
@@ -71,7 +71,7 @@ private _inidbi = ["new", "takistan"] call OO_INIDBI;
 
 //Loop
 [
-  zumi_fnc_speichern,
+  fjb_323_persistenz_fnc_speichern,
   [],
   60
 ] call CBA_fnc_waitAndExecute;
