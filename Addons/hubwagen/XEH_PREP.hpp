@@ -1,0 +1,9 @@
+PREP(absenken);
+PREP(anheben);
+PREP(handle_hit);
+PREP(handle_unconscious);
+PREP(handle_vehicle);
+PREP(kann_interagieren);
+PREP(loslassen);
+PREP(nehmen);
+PREP(verladen);

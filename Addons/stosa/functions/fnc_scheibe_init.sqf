@@ -36,28 +36,7 @@ _scheibensteuerung = ["Scheibensteuerung","Scheibensteuerung","\A3\ui_f\data\igu
 
 //Klatsche die richtige Textur drauf!
 switch (TypeOf _scheibe) do {
-  case "TargetBootcampHumanSimple_F" : {
-    _scheibe setObjectTextureGlobal [0, "pics\zielscheibe.paa"];
-    _runterklappen = ["Runterklappen","Runterklappen","\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa",{
-      params ["_t","_p","_actionparams"];
-      _actionparams params ["_s"];
-      _s animateSource ["Terc", 1];
-      {
-        detach _x;
-        deleteVehicle _x;
-      } forEach (attachedObjects _t);
-      _t setVariable ["runtergeklappt", 0, true];
-    },{!((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
-    ["zumi_interaction_add_to_object", [_steuerung, _runterklappen, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
 
-    _hochklappen = ["Hochklappen","Hochklappen","\A3\ui_f\data\igui\cfg\simpleTasks\types\upload_ca.paa",{
-      params ["_t","_p","_actionparams"];
-      _actionparams params ["_s"];
-      _s animateSource ["Terc", 0];
-      _t setVariable ["runtergeklappt", 1, true];
-    },{((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
-    ["zumi_interaction_add_to_object", [_steuerung, _hochklappen, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
-  };
   case "stuermender_schuetze" : {
     _runterklappen = ["Runterklappen","Runterklappen","\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa",{
       params ["_t","_p","_actionparams"];
@@ -116,15 +95,6 @@ switch (TypeOf _scheibe) do {
 
   };
 
-  case "Land_Billboard_02_blank_F" : {
-    _scheibe setObjectTextureGlobal [0, "pics\mg_scheibe.paa"];
-  };
-  case "Land_Billboard_02_carrental_F" : {
-    _scheibe setObjectTextureGlobal [0, "pics\mg_scheibe_gelaende.paa"];
-  };
-  case "Land_Noticeboard_F" : {
-    _scheibe setObjectTextureGlobal [0, "pics\rundscheibe.paa"];
-  };
   default {};
 };
 
@@ -164,7 +134,6 @@ _anmelden = ["Anmelden","Anmelden","\A3\ui_f\data\igui\cfg\simpleTasks\types\int
   _s setVariable ["ctrl", _ctrl];
   ["zumi_stosa_bahn", [_s, true], _p] call CBA_fnc_targetEvent;
   ["zumi_cba_hinweis", [["Sie haben sich auf der Schiessbahn angemeldet", 1, [0,1,0,1]]], _p] call CBA_fnc_targetEvent;
-  //Spieler wird automatisch abgemeldet durch Ace bei gewissen Events
 },{isNull (_target getVariable ["ace_common_owner", objNull])},{},[_scheibe, _steuerung],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 ["zumi_interaction_add_to_object", [_steuerung, _anmelden, 0, ["Scheibensteuerung"]]] call CBA_fnc_globalEventJIP;
 
@@ -172,7 +141,6 @@ _abmelden = ["Abmelden","Hier abmelden","\A3\ui_f\data\igui\cfg\simpleTasks\type
   params ["_t","_p","_actionparams"];
   _actionparams params ["_s"];
   private _owner = (_s getVariable ["ace_common_owner", objNull]);
-  //[objNull, _s] call ace_common_fnc_claim;
   [objNull, _t] call ace_common_fnc_claim;
   ["zumi_stosa_bahn", [_s, false],_owner] call CBA_fnc_targetEvent;
   if (_owner != _p) then {

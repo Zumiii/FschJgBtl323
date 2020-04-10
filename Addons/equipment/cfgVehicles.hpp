@@ -144,7 +144,7 @@ class CfgVehicles {
         class pickup {
           displayName = "Fliegerzeichen aufnehmen";
           distance = 2;
-          icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\armor_ca.paa";
+          icon = "\z\fjb_323\addons\equipment\ui\fliegerzeichen_gelb.paa";
           position = "[0,0,0]";
           showDisabled = 1;
           condition = "true";
@@ -158,7 +158,7 @@ class CfgVehicles {
       displayName = "Fliegerzeichen (Rot)";
       editorCategory = "fschjgbtl323_fleck";
       editorSubCategory = "munition";
-      icon = "z\fjb_323\addons\equipment\ui\fliegerzeichen_rot.paa";
+      icon = "\z\fjb_323\addons\equipment\ui\fliegerzeichen_rot.paa";
       scope = 2;
       scopeCurator = 2;
       ace_cargo_canLoad = 1;
