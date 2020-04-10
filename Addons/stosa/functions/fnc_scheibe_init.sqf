@@ -45,6 +45,7 @@ switch (TypeOf _scheibe) do {
     _runterklappen = ["Runterklappen","Runterklappen","\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa",{
       params ["_t","_p","_actionparams"];
       _actionparams params ["_s"];
+      [_p, "PutDown"] call ace_common_fnc_doGesture;
       _s animateSource ["Terc", 1];
       {
         detach _x;
@@ -57,6 +58,7 @@ switch (TypeOf _scheibe) do {
     _hochklappen = ["Hochklappen","Hochklappen","\A3\ui_f\data\igui\cfg\simpleTasks\types\upload_ca.paa",{
       params ["_t","_p","_actionparams"];
       _actionparams params ["_s"];
+      [_p, "PutDown"] call ace_common_fnc_doGesture;
       _s animateSource ["Terc", 0];
       _t setVariable ["runtergeklappt", 1, true];
     },{((_target getVariable ["runtergeklappt", 0]) < 1)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
@@ -112,6 +114,7 @@ _reset = ["Trefferbild_Reset","Treffer abkleben","\A3\ui_f\data\igui\cfg\simpleT
     detach _x;
     deleteVehicle _x;
   } forEach (attachedObjects _s);
+  [_p, "PutDown"] call ace_common_fnc_doGesture;
 },{((count (attachedObjects _target)) > 0)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 
 _sehen = ["Trefferbild_Sehen","Trefferaufnahme","\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa",{
