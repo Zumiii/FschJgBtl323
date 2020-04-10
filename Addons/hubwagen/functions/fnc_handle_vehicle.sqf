@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "\z\fjb_323\addons\hubwagen\script_component.hpp"
 
 params ["_unit"];
 
