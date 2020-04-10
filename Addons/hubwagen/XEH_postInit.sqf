@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "\z\fjb_323\addons\hubwagen\addons\script_component.hpp"
 
 
 if isServer then {
