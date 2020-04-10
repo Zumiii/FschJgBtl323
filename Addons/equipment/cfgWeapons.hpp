@@ -89,7 +89,7 @@ class cfgWeapons {
     picture = "z\fjb_323\addons\equipment\ui\fliegerzeichen_gelb.paa";
     scope = 2;
     class itemInfo {
-      allowedSlots[] = {801,901};
+      allowedSlots[] = {701,801,901};
       mass = 4;
       type = 620;
       scope = 0;
@@ -104,7 +104,7 @@ class cfgWeapons {
     picture = "z\fjb_323\addons\equipment\ui\fliegerzeichen_rot.paa";
     scope = 2;
     class itemInfo {
-      allowedSlots[] = {801,901};
+      allowedSlots[] = {701,801,901};
       mass = 4;
       type = 620;
       scope = 0;

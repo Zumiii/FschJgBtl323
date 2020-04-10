@@ -14,7 +14,7 @@ if (hasInterface) then {
 		{
 			[ace_player] call FUNC(handle_Unconscious);
 		}
-	] call CBA_fnc_addEventHandler
+	] call CBA_fnc_addEventHandler;
 
 	["vehicle",
 		{
