@@ -121,6 +121,8 @@ class scheibensteuerung {
 			coloractive[] = {0,0,0,1};
 			color[] = {0,0,0,1};
       colorBackground[] = {0.267,0.4,0.267,1};
+      colorText[] = {0.75, 0, 0, 1};
+			colorTextSelect[] = {0, 0.75, 0, 1};
 			onSliderPosChanged = "hint format[""%1"", _this select 1];";
 			tooltip = "Ist dieser Wert grösser 0, klappt das Ziel nach n Sekunden automatisch ab";
 		};

@@ -124,7 +124,7 @@ class cfgVehicles {
           distance = 2;
           position = "[0,0,0]";
           showDisabled = 1;
-          condition = "(_target animationSourcePhase 'open_source') <= 0";
+          condition = "(_target animationSourcePhase 'open_source') >= 1";
           statement = "[_player, 'PutDown'] call ace_common_fnc_doGesture; [_player, _target] call ace_common_fnc_claim; [{deleteVehicle (_this select 1); [(_this select 0), 'fjb_323_stosa_steuerung', true] call CBA_fnc_addItem;}, [_player, _target], 1] call CBA_fnc_waitAndExecute;";
           exceptions[] = {"isNotSwimming"};
         };
