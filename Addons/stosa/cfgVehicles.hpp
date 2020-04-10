@@ -11,6 +11,8 @@ class cfgVehicles {
 		editorSubCategory = "stosa";
 		faction = "Bundeswehr";
 		icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    zumi_hubwagen_carryPosition[] = {0,0,0};
+    zumi_hubwagen_carryDirection = 90;
     class EventHandlers {
 			class zumis_zusatz {
 				init = "params ['_scheibe']; _scheibe setObjectTextureGlobal [0, 'z\fjb_323\addons\stosa\data\t_scheibe.paa'];  [_scheibe] call fjb_323_stosa_fnc_scheibe_init;";
@@ -28,6 +30,8 @@ class cfgVehicles {
     faction = "Bundeswehr";
     icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
     nameSound = "obj_building";
+    zumi_hubwagen_carryPosition[] = {0,0,0};
+    zumi_hubwagen_carryDirection = 90;
     class EventHandlers {
       class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
 			class GVAR(Handlers) {
