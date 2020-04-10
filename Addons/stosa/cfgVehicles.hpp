@@ -16,7 +16,7 @@ class cfgVehicles {
         class ACE_Equipment  {
 
           class steuerung {
-            condition = "([_player, 'fjb_323_stosa_steuerung'] call ace_common_fnc_hasItem) && !(_player getVariable ['ace_dragging_isCarrying', false])";
+            condition = "([_player, 'fjb_323_stosa_steuerung'] call ace_common_fnc_hasItem)";
             displayName = "Mobile Scheibensteuerung aufstellen'";
             icon = "\z\fjb_323\addons\stosa\ui\joystick.paa";
             statement = "[_player, 'fjb_323_equipment_fliegerzeichen_gelb'] call CBA_fnc_removeItem; _steuerung = createVehicle ['fjb_323_stosa_steuerung', [0,0,0], [], 0, 'CAN_COLLIDE']; [_player, _steuerung] call ace_dragging_fnc_carryObject;";
@@ -29,6 +29,8 @@ class cfgVehicles {
 
   class GVAR(T_Scheibe): TargetBootcampHuman_F {
     author = "Zumi";
+    ace_dragging_canDrag = 1;
+    ace_dragging_canCarry = 1;
 		ace_cargo_canLoad = 1;
 		ace_cargo_size = 2;
     displayName = "T-Scheibe";
@@ -47,6 +49,8 @@ class cfgVehicles {
 
   class GVAR(Stuermender_Schuetze): TargetBootcampHuman_F {
     author = "Zumi";
+    ace_dragging_canDrag = 1;
+    ace_dragging_canCarry = 1;
     ace_cargo_canLoad = 1;
     ace_cargo_size = 2;
     displayName = "Stürmender Schütze";

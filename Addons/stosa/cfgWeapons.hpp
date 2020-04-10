@@ -1,7 +1,7 @@
 class cfgWeapons {
 
   class ACE_personalAidKit;
-  class GVAR(Steuerung): ACE_personalAidKit {
+  class GVAR(steuerung): ACE_personalAidKit {
     author = "Zumi";
     displayName = "Mobile Scheibensteuerung";
     descriptionShort = "Hiermit können Scheiben ferngesteuert werden";
