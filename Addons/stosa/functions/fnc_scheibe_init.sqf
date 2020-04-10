@@ -37,7 +37,7 @@ _scheibensteuerung = ["Scheibensteuerung","Scheibensteuerung","\A3\ui_f\data\igu
 //Klatsche die richtige Textur drauf!
 switch (TypeOf _scheibe) do {
 
-  case "stuermender_schuetze" : {
+  case "fjb_323_stosa_stuermender_schuetze" : {
     _runterklappen = ["Runterklappen","Runterklappen","\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa",{
       params ["_t","_p","_actionparams"];
       _actionparams params ["_s"];
