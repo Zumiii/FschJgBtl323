@@ -23,7 +23,7 @@ class zumi_checkbox {
 
 class zumi_slider {
   idc = -1;
-  type = 3;
+  type = CT_SLIDER;
   style = SL_HORZ;
   x = 0.4;
   y = 0.2;
@@ -31,6 +31,7 @@ class zumi_slider {
   h = 0.025;
   color[] = { 1, 1, 1, 1 };
   coloractive[] = { 1, 0, 0, 0.5 };
+  colorBackground[] = {1, 1, 1, 1};
   onSliderPosChanged = "hint format[""%1"",_this];";
   sliderPosition = 0;
 	sliderRange[] = {0,120};
@@ -119,6 +120,7 @@ class scheibensteuerung {
 			h = 0.044 * safezoneH;
 			coloractive[] = {0,0,0,1};
 			color[] = {0,0,0,1};
+      colorBackground[] = {0.267,0.4,0.267,1};
 			onSliderPosChanged = "hint format[""%1"", _this select 1];";
 			tooltip = "Ist dieser Wert grösser 0, klappt das Ziel nach n Sekunden automatisch ab";
 		};

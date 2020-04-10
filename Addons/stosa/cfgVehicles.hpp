@@ -19,7 +19,7 @@ class cfgVehicles {
             condition = "([_player, 'fjb_323_stosa_steuerung'] call ace_common_fnc_hasItem)";
             displayName = "Mobile Scheibensteuerung auspacken";
             icon = "\z\fjb_323\addons\stosa\ui\joystick.paa";
-            statement = "[_player, 'fjb_323_equipment_fliegerzeichen_gelb'] call CBA_fnc_removeItem; _pos = _player getPos [1, getDir _player]; _steuerung = createVehicle ['fjb_323_stosa_steuerung', [_pos select 0, _pos select 1, 0.01], [], 0, 'CAN_COLLIDE']; _steuerung setDir getDir _player; _steuerung setVectorUp (surfacenormal (position _steuerung));";
+            statement = "[_player, 'fjb_323_equipment_fliegerzeichen_gelb'] call CBA_fnc_removeItem; _pos = _player getPos [1, getDir _player]; _steuerung = createVehicle ['fjb_323_stosa_steuerung', [_pos select 0, _pos select 1, 1], [], 0, 'CAN_COLLIDE']; _steuerung setDir getDir _player; _steuerung setVectorUp (surfacenormal (position _steuerung));";
           };
 
         };
@@ -31,6 +31,8 @@ class cfgVehicles {
     author = "Zumi";
     ace_dragging_canDrag = 1;
     ace_dragging_canCarry = 1;
+    ace_dragging_dragPosition[] = {0, 1, 0};
+    ace_dragging_carryPosition[] = {0, 1, 0};
 		ace_cargo_canLoad = 1;
 		ace_cargo_size = 2;
     displayName = "T-Scheibe";
@@ -51,6 +53,8 @@ class cfgVehicles {
     author = "Zumi";
     ace_dragging_canDrag = 1;
     ace_dragging_canCarry = 1;
+    ace_dragging_dragPosition[] = {0, 1, 0};
+    ace_dragging_carryPosition[] = {0, 1, 0};
     ace_cargo_canLoad = 1;
     ace_cargo_size = 2;
     displayName = "Stürmender Schütze";
@@ -75,10 +79,6 @@ class cfgVehicles {
 
   class GVAR(Steuerung): Land_laptop_03_olive_F {
     author = "Zumi";
-    ace_dragging_canDrag = 1;
-    ace_dragging_canCarry = 1;
-    ace_cargo_canLoad = 1;
-    ace_cargo_size = 1;
     displayName = "Scheibensteuerung";
     editorCategory = "fschjgbtl323_fleck";
     editorSubCategory = "stosa";
@@ -115,7 +115,7 @@ class cfgVehicles {
           icon = "\z\fjb_323\addons\stosa\ui\joystick.paa";
           position = "[0,0,0]";
           showDisabled = 1;
-          condition = "(_target animationSourcePhase 'open_source') == 1";
+          condition = "(_target animationSourcePhase 'open_source') <= 0";
           statement = "createDialog 'Scheibensteuerung';";
           exceptions[] = {"isNotSwimming"};
         };
