@@ -68,9 +68,9 @@ class CfgVehicles {
 
   class Vest_Base_F;
   class GVAR(Tragegurt_Wepholder): Vest_Base_F {
-  		scope = 0;
-  		scopeCurator = 0;
-      scopeArsenal = 0;
+  		scope = 2;
+  		scopeCurator = 2;
+      scopeArsenal = 2;
   		displayName = "Plattenträger (Flecktarn)";
   		author = "Zumi";
   		vehicleClass = "ItemsVests";
@@ -88,7 +88,7 @@ class CfgVehicles {
   		scopeCurator = 0;
   		displayName = "Taschenkarte Nummer 9";
   		author = "Zumi";
-      picture = "\z\fjb_323\addons\equipment\ui\tk_nr9_1.paa";
+      picture = "\z\fjb_323\addons\equipment\ui\tk_nr9_1";
   		class TransportItems {
   			class fjb_323_equipment_taschenkarte_9 {
   				name = "Taschenkarte 9";
@@ -102,7 +102,7 @@ class CfgVehicles {
   		scopeCurator = 0;
   		displayName = "Taschenkarte Nummer 11";
   		author = "Zumi";
-      picture = "\z\fjb_323\addons\equipment\ui\tk_nr11_1.paa";
+      picture = "\z\fjb_323\addons\equipment\ui\tk_nr11_1";
   		class TransportItems {
   			class fjb_323_equipment_taschenkarte_11 {
   				name = "Taschenkarte 11";
@@ -170,7 +170,7 @@ class CfgVehicles {
         class pickup {
           displayName = "Fliegerzeichen aufnehmen";
           distance = 2;
-          icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\armor_ca.paa";
+          icon = "\z\fjb_323\addons\equipment\ui\fliegerzeichen_rot.paa";
           position = "[0,0,0]";
           showDisabled = 1;
           condition = "true";

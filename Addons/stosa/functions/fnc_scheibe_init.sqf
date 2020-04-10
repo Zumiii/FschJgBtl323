@@ -12,6 +12,10 @@ params [
   ["_steuerung", objNull] //Steuerung
 ];
 
+
+_scheibe allowDamage false;
+
+
 if (isNull _steuerung) then {
   _steuerung = _scheibe;
 };
@@ -37,7 +41,7 @@ _scheibensteuerung = ["Scheibensteuerung","Scheibensteuerung","\A3\ui_f\data\igu
 //Klatsche die richtige Textur drauf!
 switch (TypeOf _scheibe) do {
 
-  case "fjb_323_stosa_stuermender_schuetze" : {
+  case "fjb_323_stosa_Stuermender_Schuetze" : {
     _runterklappen = ["Runterklappen","Runterklappen","\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa",{
       params ["_t","_p","_actionparams"];
       _actionparams params ["_s"];

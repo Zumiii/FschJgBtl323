@@ -80,7 +80,7 @@ class CAManBase: Man {
 		scopeCurator = 0;
 		displayName = "Shottimer";
 		author = "Zumi";
-    picture = "\z\fjb_323\addons\drill\data\shottimer.paa";
+    picture = "\z\fjb_323\addons\drill\data\shottimer";
 		class TransportItems {
 			class zumi_shottimer {
 				name = "Shottimer";

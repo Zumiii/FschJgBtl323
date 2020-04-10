@@ -4,8 +4,7 @@
 
 
 if isServer then {
-  klappziele = [];
-  publicVariable "klappziele";
+
 };
 
 if (hasInterface) then {
