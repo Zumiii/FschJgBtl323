@@ -86,7 +86,7 @@ class cfgWeapons {
     displayName = "Fliegerzeichen (Gelb)";
     descriptionShort = "Zur Signalisierung an die Kräfte zur Luft";
     model = "\A3\weapons_F\ammo\mag_univ.p3d";
-    picture = "z\fjb_323\addons\equipment\ui\fliegerzeichen_gelb.paa";
+    picture = "\z\fjb_323\addons\equipment\ui\fliegerzeichen_gelb.paa";
     scope = 2;
     class itemInfo {
       allowedSlots[] = {701,801,901};
@@ -101,7 +101,7 @@ class cfgWeapons {
     displayName = "Fliegerzeichen (Rot)";
     descriptionShort = "Zur Signalisierung an die Kräfte zur Luft";
     model = "\A3\weapons_F\ammo\mag_univ.p3d";
-    picture = "z\fjb_323\addons\equipment\ui\fliegerzeichen_rot.paa";
+    picture = "\z\fjb_323\addons\equipment\ui\fliegerzeichen_rot.paa";
     scope = 2;
     class itemInfo {
       allowedSlots[] = {701,801,901};

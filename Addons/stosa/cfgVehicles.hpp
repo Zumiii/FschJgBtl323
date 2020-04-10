@@ -2,6 +2,31 @@ class TargetBootcampHuman_F;
 class CBA_Extended_EventHandlers;
 
 class cfgVehicles {
+
+  class Man;
+  class CAManBase: Man {
+    class EventHandlers {
+    	class GVAR(reload) {
+    		reloaded = "params ['_player','_wep','_muzzle','_fullmag','_reloadedmag']; if (vehicle _player != _player) exitWith {}; if (_reloadedmag select 1 == 0) then {_player addMagazine  [(_reloadedmag select 0), 0]};";
+    	};
+    };
+
+      class Ace_SelfActions {
+
+        class ACE_Equipment  {
+
+          class steuerung {
+            condition = "([_player, 'fjb_323_stosa_steuerung'] call ace_common_fnc_hasItem) && !(_player getVariable ['ace_dragging_isCarrying', false])";
+            displayName = "Mobile Scheibensteuerung aufstellen'";
+            icon = "\z\fjb_323\addons\stosa\ui\joystick.paa";
+            statement = "[_player, 'fjb_323_equipment_fliegerzeichen_gelb'] call CBA_fnc_removeItem; _steuerung = createVehicle ['fjb_323_stosa_steuerung', [0,0,0], [], 0, 'CAN_COLLIDE']; [_player, _steuerung] call ace_dragging_fnc_carryObject;";
+          };
+
+        };
+
+      };
+  };
+
   class GVAR(T_Scheibe): TargetBootcampHuman_F {
     author = "Zumi";
 		ace_cargo_canLoad = 1;
@@ -40,4 +65,63 @@ class cfgVehicles {
 			};
 		};
   };
+
+  class Land_laptop_03_closed_olive_F;
+
+  //cursortarget animateSource ["open_source", 0];
+
+  class GVAR(Steuerung): Land_laptop_03_closed_olive_F {
+    author = "Zumi";
+    ace_dragging_canDrag = 1;
+    ace_dragging_canCarry = 1;
+    ace_cargo_canLoad = 1;
+    ace_cargo_size = 1;
+    displayName = "Scheibensteuerung";
+    editorCategory = "fschjgbtl323_fleck";
+    editorSubCategory = "stosa";
+    faction = "Bundeswehr";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    class ACE_Actions {
+      class GVAR(open) {
+        displayName = "Aufklappen";
+        distance = 2;
+        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\upload_CA.paa";
+        position = "[0,0,0]";
+        showDisabled = 1;
+        condition = "(_target animationSourcePhase 'open_source') > 0";
+        statement = "_target animateSource ['open_source', 0]";
+        exceptions[] = {"isNotSwimming"};
+      };
+      class GVAR(close) {
+        displayName = "Zuklappen";
+        distance = 2;
+        icon = "\A3\ui_f\data\igui\cfg\simpleTasks\types\download_CA.paa";
+        position = "[0,0,0]";
+        showDisabled = 1;
+        condition = "(_target animationSourcePhase 'open_source') <= 0";
+        statement = "_target animateSource ['open_source', 1]";
+        exceptions[] = {"isNotSwimming"};
+      };
+      class GVAR(Gui) {
+        displayName = "Scheibensteuerung";
+        distance = 2;
+        icon = "\z\fjb_323\addons\stosa\ui\joystick.paa";
+        position = "[0,0,0]";
+        showDisabled = 1;
+        condition = "(_target animationSourcePhase 'open_source') == 1";
+        statement = "createDialog 'Scheibensteuerung';";
+        exceptions[] = {"isNotSwimming"};
+      };
+      class GVAR(pickup) {
+        displayName = "Steuerung aufnehmen";
+        distance = 2;
+        position = "[0,0,0]";
+        showDisabled = 1;
+        condition = "(_target animationSourcePhase 'open_source') <= 0";
+        statement = "[_player, 'PutDown'] call ace_common_fnc_doGesture; [_player, _target] call ace_common_fnc_claim; [{deleteVehicle (_this select 1); [(_this select 0), 'fjb_323_stosa_steuerung', true] call CBA_fnc_addItem;}, [_player, _target], 1] call CBA_fnc_waitAndExecute;";
+        exceptions[] = {"isNotSwimming"};
+      };
+    };
+  };
+
 };

@@ -9,7 +9,7 @@ if isServer then {
 
 if (hasInterface) then {
 
-	taschenkarten = [[9,7],[11,1]];
+	taschenkarten = [[1,7],[1,1]];
 
 	leere_waffen = [];
 
@@ -27,7 +27,7 @@ if (hasInterface) then {
 			{
 			  detach _x;
 			  deleteVehicle _x;
-			} forEach ((attachedObjects ACE_player) select {(typeOf _x) == "zumi_weaponHolder"});
+			} forEach ((attachedObjects ACE_player) select {(typeOf _x) == "fjb_323_equipment_weaponholder"});
 		}
 	] call CBA_fnc_addPlayerEventHandler;
 
@@ -44,7 +44,7 @@ if (hasInterface) then {
 		{
 			detach _x;
 			deleteVehicle _x;
-		} forEach ((attachedObjects ACE_player) select {(typeOf _x) == "zumi_weaponHolder"});
+		} forEach ((attachedObjects ACE_player) select {(typeOf _x) == "fjb_323_equipment_weaponholder"});
 	}] call CBA_fnc_addEventHandler;
 
 

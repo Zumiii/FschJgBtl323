@@ -5,10 +5,11 @@ class CfgPatches {
     name = COMPONENT_NAME;
     units[] = {
       GVAR(T_Scheibe),
-      GVAR(Stuermender_Schuetze)
+      GVAR(Stuermender_Schuetze),
+      GVAR(Steuerung)
     };
     weapons[] = {
-
+      GVAR(Steuerung)
     };
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {

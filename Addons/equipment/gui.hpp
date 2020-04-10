@@ -3,6 +3,8 @@ class RscFrame;
 class RscPicture;
 class IGUIBack;
 
+
+
 class taschenkarte_nummer_9 {
   idd = 3239;
   access = 2;

@@ -13,8 +13,6 @@ params [
 ];
 
 
-_scheibe allowDamage false;
-
 
 if (isNull _steuerung) then {
   _steuerung = _scheibe;
@@ -115,7 +113,7 @@ _reset = ["Trefferbild_Reset","Treffer abkleben","\A3\ui_f\data\igui\cfg\simpleT
     deleteVehicle _x;
   } forEach (attachedObjects _s);
   [_p, "PutDown"] call ace_common_fnc_doGesture;
-},{((count (attachedObjects _target)) > 0)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
+},{((count (attachedObjects _target)) > 0) && (({isObjectHidden _x} count (attachedObjects _target)) <= 0)},{},[_scheibe],[0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 
 _sehen = ["Trefferbild_Sehen","Trefferaufnahme","\A3\ui_f\data\igui\cfg\simpleTasks\types\search_ca.paa",{
   params ["_t","_p","_actionparams"];

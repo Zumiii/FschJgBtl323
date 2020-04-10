@@ -8,7 +8,7 @@ if !hasInterface exitWith {};
 
 params ["_p","_t"];
 
-private _hubgut = (nearestObjects [getPos _t, ["All"], 2, true]) select {!((typeOf _x) IN ["Hubwagen_gelb","Hubwagen_khaki"]) && (!isPlayer _x)};
+private _hubgut = (nearestObjects [getPos _t, ["All"], 3, true]) select {!((typeOf _x) IN ["fjb_323_hubwagen_hubwagen"]) && (!isPlayer _x)};
 
 if (count _hubgut > 0) then {
   private _pal = (_hubgut select 0);

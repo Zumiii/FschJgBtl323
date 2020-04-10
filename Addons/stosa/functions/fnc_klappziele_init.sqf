@@ -10,7 +10,6 @@ params [
   "_scheibe"
 ];
 
-_scheibe allowDamage false;
 
 klappziele pushBack [_scheibe, [], []];
 publicVariable "klappziele";
