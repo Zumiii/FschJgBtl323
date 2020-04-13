@@ -42,7 +42,7 @@ class cfgVehicles {
     zumi_hubwagen_carryDirection = 90;
     class EventHandlers {
 			class zumis_zusatz {
-				init = "params ['_scheibe']; [_scheibe] call fjb_323_stosa_fnc_scheibe_init; private _tex_1 = createsimpleobject ['UserTexture1m_F', [0,0,0]]; _tex_1 setObjectTextureGlobal [0, 'z\fjb_323\addons\stosa\data\t_scheibe.paa'];	_tex_1 attachTo [_entity, [0.6,0.02,0.6],''];  private _tex_2 = createsimpleobject ['UserTexture1m_F', [0,0,0]]; _tex_2 setObjectTextureGlobal [0, 'z\fjb_323\addons\stosa\data\t_scheibe.paa'];	_tex_2 attachTo [_entity, [0.6,0.02,0.6],''];";
+				init = "params ['_scheibe']; [_scheibe] call fjb_323_stosa_fnc_scheibe_init; private _tex = createsimpleobject ['UserTexture_1x2_F', [0,0,0]]; _tex setObjectTextureGlobal [0, 'z\fjb_323\addons\stosa\data\t_scheibe.paa'];	_tex attachTo [_entity, [0.6,-0.02,0.6],'']; [_scheibe, 0, 90, 0] remoteExecCall ['ace_common_fnc_setPitchBankYaw', _scheibe]";
 			};
 		};
   };
