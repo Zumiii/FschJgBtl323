@@ -4,6 +4,8 @@ class RscPicture;
 class IGUIBack;
 class RscButton;
 class RscListbox;
+class CT_SLIDER;
+
 class zumi_checkbox {
 	type = 7;
 	x = 0.604062 * safezoneW + safezoneX;
@@ -21,10 +23,8 @@ class zumi_checkbox {
 	rows = 6;
 };
 
-class zumi_slider {
+class zumi_slider: CT_SLIDER {
   idc = -1;
-  type = CT_SLIDER;
-  style = SL_HORZ;
   x = 0.4;
   y = 0.2;
   w = 0.3;
@@ -118,6 +118,7 @@ class scheibensteuerung {
 			y = 0.544 * safezoneH + safezoneY;
 			w = 0.0979687 * safezoneW;
 			h = 0.044 * safezoneH;
+			font = "RobotoCondensed";
 			coloractive[] = {0,0,0,1};
 			color[] = {0,0,0,1};
       colorBackground[] = {0.267,0.4,0.267,1};

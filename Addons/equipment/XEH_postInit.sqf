@@ -9,7 +9,7 @@ if isServer then {
 
 if (hasInterface) then {
 
-	taschenkarten = [[1,7],[1,1]];
+	taschenkarten = [[1,7],[1,1],[1,9]];
 
 	leere_waffen = [];
 

@@ -1,4 +1,4 @@
-class TargetBootcampHuman_F;
+
 class CBA_Extended_EventHandlers;
 
 class cfgVehicles {
@@ -27,14 +27,12 @@ class cfgVehicles {
       };
   };
 
-  class GVAR(T_Scheibe): TargetBootcampHuman_F {
+
+  class Sign_F;
+  class GVAR(T_Scheibe): Sign_F {
     author = "Zumi";
-    ace_dragging_canDrag = 1;
-    ace_dragging_canCarry = 1;
-    ace_dragging_dragPosition[] = {0, 1, 0};
-    ace_dragging_carryPosition[] = {0, 1, 0};
-		ace_cargo_canLoad = 1;
-		ace_cargo_size = 2;
+    ace_cargo_canLoad = 1;
+    ace_cargo_size = 2;
     displayName = "T-Scheibe";
 		editorCategory = "fschjgbtl323_fleck";
 		editorSubCategory = "stosa";
@@ -44,11 +42,11 @@ class cfgVehicles {
     zumi_hubwagen_carryDirection = 90;
     class EventHandlers {
 			class zumis_zusatz {
-				init = "params ['_scheibe']; _scheibe setObjectTextureGlobal [0, 'z\fjb_323\addons\stosa\data\t_scheibe.paa'];  [_scheibe] call fjb_323_stosa_fnc_scheibe_init;";
+				init = "params ['_scheibe']; [_scheibe] call fjb_323_stosa_fnc_scheibe_init; private _tex_1 = 'UserTexture1m_F' createsimpleobject [0,0,0]; _tex_1 setObjectTextureGlobal [0, 'z\fjb_323\addons\stosa\data\t_scheibe.paa'];	_tex_1 attachTo [_entity, [0.6,0.02,0.6],''];  private _tex_2 = 'UserTexture1m_F' createsimpleobject [0,0,0]; _tex_2 setObjectTextureGlobal [0, 'z\fjb_323\addons\stosa\data\t_scheibe.paa'];	_tex_2 attachTo [_entity, [0.6,0.02,0.6],''];";
 			};
 		};
   };
-
+  class TargetBootcampHuman_F;
   class GVAR(Stuermender_Schuetze): TargetBootcampHuman_F {
     author = "Zumi";
     ace_dragging_canDrag = 1;
@@ -63,7 +61,7 @@ class cfgVehicles {
     faction = "Bundeswehr";
     icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
     nameSound = "obj_building";
-    zumi_hubwagen_carryPosition[] = {0,0,0};
+    zumi_hubwagen_carryPosition[] = {0,0,0.25};
     zumi_hubwagen_carryDirection = 90;
     class EventHandlers {
       class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};

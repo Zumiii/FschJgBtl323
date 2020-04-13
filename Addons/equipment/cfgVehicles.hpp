@@ -26,6 +26,13 @@ class CfgVehicles {
             statement = "createDialog 'taschenkarte_nummer_11';";
           };
 
+          class fauler_knecht {
+            condition = "([_player, 'fjb_323_equipment_fauler_knecht'] call ace_common_fnc_hasItem)";
+            displayName = "'Fauler Knecht'";
+            icon = "\z\fjb_323\addons\equipment\ui\fauler_knecht.paa";
+            statement = "createDialog 'fauler_knecht';";
+          };
+
           class fliegerzeichen_gelb {
             condition = "([_player, 'fjb_323_equipment_fliegerzeichen_gelb'] call ace_common_fnc_hasItem)";
             displayName = "Fliegerzeichen (gelb) auslegen";
@@ -106,6 +113,20 @@ class CfgVehicles {
   		class TransportItems {
   			class fjb_323_equipment_taschenkarte_11 {
   				name = "Taschenkarte 11";
+  				count = 1;
+  			};
+  		};
+  	};
+
+    class GVAR(fauler_knecht): Misc_thing {
+  		scope = 0;
+  		scopeCurator = 0;
+  		displayName = "Taschenkarte 'Fauler Knecht'";
+  		author = "Zumi";
+      picture = "\z\fjb_323\addons\equipment\ui\fauler_knecht";
+  		class TransportItems {
+  			class fjb_323_equipment_fauler_knecht {
+  				name = "Taschenkarte 'Fauler Knecht'";
   				count = 1;
   			};
   		};

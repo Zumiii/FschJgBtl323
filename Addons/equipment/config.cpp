@@ -9,6 +9,7 @@ class CfgPatches {
       GVAR(Tragegurt_Wepholder),
       GVAR(taschenkarte_9),
       GVAR(taschenkarte_11),
+      GVAR(fauler_knecht),
       GVAR(fliegerzeichen_gelb_base),
       GVAR(fliegerzeichen_rot_base),
       GVAR(fliegerzeichen_gelb),
@@ -18,6 +19,7 @@ class CfgPatches {
       GVAR(Tragegurt),
       GVAR(taschenkarte_9),
       GVAR(taschenkarte_11),
+      GVAR(fauler_knecht),
       GVAR(fliegerzeichen_gelb),
       GVAR(fliegerzeichen_rot)
     };

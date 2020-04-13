@@ -81,6 +81,21 @@ class cfgWeapons {
     };
   };
 
+  class GVAR(fauler_knecht): ACE_personalAidKit {
+    author = "Zumi";
+    displayName = "Taschenkarte 'Fauler Knecht'";
+    descriptionShort = "Fauler Knecht - Ein Muss für jeden 323ler";
+    model = "\A3\weapons_F\ammo\mag_univ.p3d";
+    picture = "\z\fjb_323\addons\equipment\ui\fauler_knecht.paa";
+    scope = 2;
+    class itemInfo {
+      allowedSlots[] = {701,801,901};
+      mass = 1;
+      type = 620;
+      scope = 0;
+    };
+  };
+
   class GVAR(fliegerzeichen_gelb): ACE_personalAidKit {
     author = "Zumi";
     displayName = "Fliegerzeichen (Gelb)";
