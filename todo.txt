@@ -96,3 +96,17 @@ _piss = ["Pissen", "Pissen","\A3\ui_f\data\igui\cfg\simpleTasks\types\land_ca.pa
 },{true}, {}, [], [0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
 
 ["zumi_interaction_add_to_class", ["CAManBase", _piss, 1, ["ACE_SelfActions"], true]] call CBA_fnc_globalEventJIP;
+
+
+
+private _vDir = getDir _unit;
+private _vLat = vectorNormalized (_vDir vectorCrossProduct [0, 0, 1]);
+private _vUp = _vLat vectorCrossProduct _vDir;
+
+private _position = _unit modelToWorldWorld (_unit selectionPosition "RightHand") vectorAdd (_vLat vectorMultiply 0.59);
+private _velocity = vectorNormalized (_vDir vectorAdd (_vUp vectorMultiply tan 63.43)) vectorMultiply 1.5 vectorAdd velocity _unit;
+
+ball setPosWorld _position;
+ball setVectorDirAndUp [_vUp, _vLat];
+ball setVelocity _velocity;
+ball addTorque (call CBA_fnc_randomVector3D vectorMultiply 0.2);
