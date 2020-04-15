@@ -87,7 +87,8 @@ if (hasInterface) then {
     };
 	}] call CBA_fnc_addEventHandler;
 
-  [FUNC(CustomSignalFunc)] call acre_api_fnc_setCustomSignalFunc;
+  //Testreife
+  //[FUNC(CustomSignalFunc)] call acre_api_fnc_setCustomSignalFunc;
 
 };
 

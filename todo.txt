@@ -12,3 +12,87 @@ Westen importieren
 Drill:
 Powerpointfolien
 - Modul
+
+
+_piss = ["Pissen", "Pissen","\A3\ui_f\data\igui\cfg\simpleTasks\types\land_ca.paa",{
+ params ["_t","_p","_actionparams"];
+
+   player setVariable ["ace_repair_selectedWeaponOnrepair", currentWeapon player];
+
+   // Cannot use secondairy weapon for animation
+   if (currentWeapon player == secondaryWeapon player) then {
+       player selectWeapon (primaryWeapon player);
+   };
+
+   private _wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon player, handgunWeapon player] find (currentWeapon player)));
+   _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
+   if (vehicle player == player && {_callerAnim != ""}) then {
+       if (primaryWeapon player == "") then {
+           player addWeapon "ACE_FakePrimaryWeapon";
+       };
+       if (currentWeapon player == "") then {
+           player selectWeapon (primaryWeapon player);
+       };
+
+       if !(player call ace_common_fnc_isSwimming) then {
+           if (stance player == "STAND") then {
+               player setVariable ["ace_repair_repairPrevAnimCaller", "amovpknlmstpsraswrfldnon"];
+           } else {
+               player setVariable ["ace_repair_repairPrevAnimCaller", animationState player];
+           };
+           [player, _callerAnim] call ace_common_fnc_doAnimation;
+       };
+   };
+
+     [player, "Acts_AidlPercMstpSlowWrflDnon_pissing", 1] call ace_common_fnc_doAnimation;  //Pissanimation
+     [
+       10,
+       [player],
+       {
+         params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
+         _args params ["_player"];
+         _pos = _player getPos [1, getDir _player]; _pisslache = createVehicle ["WaterSpill_01_Small_New_F", _pos, [], 0, "CAN_COLLIDE"]; _pisslache setObjectTextureGlobal [0, "pisse.paa"];
+         [["Sie fühlen sich erleichtert!", 1, [0,1,0,1]], ["\z\fjb_323\addons\standortverwaltung\data\wc.paa", 1]] call CBA_fnc_notify;
+         [
+           {
+             params ["_pisslache"];
+             deleteVehicle _pisslache;
+           },
+           [_pisslache],
+           60
+         ] call cba_fnc_waitAndExecute;
+       },
+       {
+         params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
+         _args params ["_player"];
+
+         private _animation = switch (currentWeapon _player) do {
+           case "": {"amovpercmstpsnonwnondnon"};
+           case (primaryWeapon _player): {"amovpercmstpslowwrfldnon"};
+           case (handgunWeapon _player): {"amovpercmstpslowwpstdnon"};
+           default {"amovpercmstpsnonwnondnon"};
+         };
+         [_player, _animation, 2] call ace_common_fnc_doAnimation;
+         _player removeWeapon "ACE_FakePrimaryWeapon";
+         _player setVariable ["ace_repair_repairPrevAnimCaller", nil];
+         private _weaponSelect = (_player getVariable ["ace_repair_selectedWeaponOnrepair", ""]);
+         if (_weaponSelect != "") then {
+           _player selectWeapon _weaponSelect;
+         } else {
+           _player action ["SwitchWeapon", _player, _player, 299];
+         };
+
+         [["Das ging in die Hose!", 1, [1,0,0,1]], ["\z\fjb_323\addons\standortverwaltung\data\wc.paa", 1]] call CBA_fnc_notify;
+       },
+       "Entleere Blase...",
+       {
+         params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
+         _args params ["_player"];
+         (alive _player);
+       },
+       ["isNotSwimming", "isNotOnLadder"]
+     ] call ace_common_fnc_progressBar;
+
+},{true}, {}, [], [0,0,0], 2] call fjb_323_interactions_fnc_interaction_create;
+
+["zumi_interaction_add_to_class", ["CAManBase", _piss, 1, ["ACE_SelfActions"], true]] call CBA_fnc_globalEventJIP;
