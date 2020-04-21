@@ -6,7 +6,7 @@
 
 if !isServer exitWith {};
 
-private _inidbi = ["new", "takistan"] call OO_INIDBI;
+private _inidbi = ["new", "guez"] call OO_INIDBI;
 
 /*////////////////////////////////////////
 / Spielerpersistenz                      /
@@ -71,7 +71,7 @@ private _inidbi = ["new", "takistan"] call OO_INIDBI;
 
 //Loop
 [
-  fjb_323_persistenz_fnc_speichern,
+  fjb_323_persistenz_fnc_save,
   [],
   60
 ] call CBA_fnc_waitAndExecute;
