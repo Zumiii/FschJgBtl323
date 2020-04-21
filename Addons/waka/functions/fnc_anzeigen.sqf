@@ -24,4 +24,4 @@ lbSort [_liste, "ASC"];
 _liste lbsetCursel 0;
 
 
-[] call FUNC(updaten);
+[] call fjb_323_waka_fnc_updaten;

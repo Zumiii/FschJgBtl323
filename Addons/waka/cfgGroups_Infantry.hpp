@@ -19,28 +19,28 @@ class Infantry {
             side = 1;
             vehicle = "323_zgfr_stelv";
             rank = "CORPORAL";
-            position[] = {5,-5,0};
+            position[] = {1,0,0};
         };
 
         class Unit2 {
             side = 1;
             vehicle = "323_charlie";
             rank = "PRIVATE";
-            position[] = {-5,-5,0};
+            position[] = {2,0,0};
         };
 
         class Unit3 {
             side = 1;
             vehicle = "323_schuetze";
             rank = "PRIVATE";
-            position[] = {10,-10,0};
+            position[] = {3,0,0};
         };
 
         class Unit4 {
             side = 1;
             vehicle = "323_schuetze";
             rank = "PRIVATE";
-            position[] = {-10,-10,0};
+            position[] = {4,0,0};
         };
 
     };
@@ -62,77 +62,77 @@ class Infantry {
             side = 1;
             vehicle = "323_trpfr";
             rank = "CORPORAL";
-            position[] = {5,-5,0};
+            position[] = {1,0,0};
         };
 
         class Unit2 {
             side = 1;
             vehicle = "323_mg_eins";
             rank = "PRIVATE";
-            position[] = {-5,-5,0};
+            position[] = {2,0,0};
         };
 
         class Unit3 {
             side = 1;
             vehicle = "323_mg_zwo";
             rank = "PRIVATE";
-            position[] = {10,-10,0};
+            position[] = {3,0,0};
         };
 
         class Unit4 {
             side = 1;
             vehicle = "323_schuetze_pzf";
             rank = "PRIVATE";
-            position[] = {-10,-10,0};
+            position[] = {4,0,0};
         };
 
         class Unit5 {
             side = 1;
             vehicle = "323_schuetze_pzf";
             rank = "PRIVATE";
-            position[] = {15,-15,0};
+            position[] = {5,0,0};
         };
 
         class Unit6 {
             side = 1;
             vehicle = "323_grapi";
             rank = "PRIVATE";
-            position[] = {-20,20,0};
+            position[] = {6,0,0};
         };
 
         class Unit7 {
             side = 1;
             vehicle = "323_bravo";
             rank = "PRIVATE";
-            position[] = {20,-20,0};
+            position[] = {7,0,0};
         };
 
         class Unit8 {
             side = 1;
             vehicle = "323_zf";
             rank = "PRIVATE";
-            position[] = {25,-25,0};
+            position[] = {8,0,0};
         };
 
         class Unit9 {
             side = 1;
             vehicle = "323_schuetze";
             rank = "PRIVATE";
-            position[] = {-25,25,0};
+            position[] = {9,0,0};
         };
 
         class Unit10 {
             side = 1;
             vehicle = "323_schuetze";
             rank = "PRIVATE";
-            position[] = {30,-30,0};
+            position[] = {10,0,0};
         };
 
         class Unit11 {
             side = 1;
             vehicle = "323_schuetze";
             rank = "PRIVATE";
-            position[] = {-30,30,0};
+            position[] = {11,0,0};
         };
 
     };

@@ -4,24 +4,25 @@ class CfgPatches {
   class ADDON {
     name = COMPONENT_NAME;
     units[] = {
-      "323_"zgfr",
-      "323_zgfr_stelv",
-      "323_grpfr",
-      "323_trpfr",
-      "323_schuetze",
-      "323_schuetze_pzf",
-      "323_mg_eins",
-      "323_mg_zwo",
-      "323_grapi",
-      "323_bravo",
-      "323_charlie",
-      "323_zf"
+      323_zgfr,
+      323_zgfr_stelv,
+      323_grpfr,
+      323_trpfr,
+      323_schuetze,
+      323_schuetze_pzf,
+      323_mg_eins,
+      323_mg_zwo,
+      323_grapi,
+      323_bravo,
+      323_charlie,
+      323_zf
     };
     weapons[] = {
 
     };
     requiredVersion = REQUIRED_VERSION;
-    requiredAddons = {
+    requiredAddons[] = {
+      "ace_common",
       "ace_common",
       "bwa3_common",
       "bwa3_g36",
@@ -42,12 +43,10 @@ class CfgPatches {
       "bwa3_vector"
     };
     author = "Zumi";
-    authors[] = {"Zumi"};
     url = "www.fallschirmjgbtl-323.de";
     VERSION_CONFIG;
   };
 };
-
 #include "cfgWeapons.hpp"
 #include "cfgVehicles.hpp"
 #include "cfgEventHandlers.hpp"

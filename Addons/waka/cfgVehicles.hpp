@@ -127,7 +127,6 @@ class cfgVehicles {
   class 323_bravo: 323_schuetze_base {
     displayName = "EEH (Bravo)";
     scope = 2;
-    icon = "iconManMedic";
     picture = "pictureHeal";
     role = "CombatLifeSaver";
     attendant = 1;
@@ -142,7 +141,6 @@ class cfgVehicles {
   class 323_charlie: 323_schuetze_base {
     displayName = "EEH (Charlie)";
     scope = 2;
-    icon = "iconManMedic";
     picture = "pictureHeal";
     role = "CombatLifeSaver";
     attendant = 2;
