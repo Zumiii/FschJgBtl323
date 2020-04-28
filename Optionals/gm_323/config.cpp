@@ -4,12 +4,10 @@ class CfgPatches {
   class ADDON {
     name = COMPONENT_NAME;
     units[] = {
-      QGVAR(bla),
-      QGVAR(blub)
+      GVAR(Helm)
     };
     weapons[] = {
-      QGVAR(blu),
-      QGVAR(blab)
+      GVAR(Helm)
     };
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {
