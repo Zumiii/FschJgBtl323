@@ -67,6 +67,7 @@ class CfgVehicles {
 
   class WeaponHolder_Single_limited_weapon_F;
   class GVAR(weaponHolder): WeaponHolder_Single_limited_weapon_F {
+   disableInventory = 1;
    memoryPointSupply = "";
    supplyRadius = 0.1;
    getInRadius= 0.1;
