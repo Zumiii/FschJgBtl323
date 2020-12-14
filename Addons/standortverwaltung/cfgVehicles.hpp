@@ -12,9 +12,9 @@ class cfgVehicles {
     displayName = "Flaggenmast";
     editorCategory = "fschjgbtl323_fleck";
   	editorSubCategory = "Ausbildung";
-    icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
     class EventHandlers: EventHandlers {
-      init = "(_this select 0) setFlagTexture 'z\fjb_323\addons\standortverwaltung\data\banner.paa'; (_this select 0) setVariable ['flagge', 1, true];";
+      init = "(_this select 0) setFlagTexture 'z\fjb_323\addons\standortverwaltung\data\banner92.paa'; (_this select 0) setVariable ['flagge', 1, true];";
       class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
     };
     class ACE_Actions: ACE_Actions {
@@ -53,8 +53,8 @@ class cfgVehicles {
           };
           class Flagge_323 {
             displayName = "323";
-            statement = "[_target, 'z\fjb_323\addons\standortverwaltung\data\banner.paa'] remoteExecCall ['setFlagTexture', _target];";
-            icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+            statement = "[_target, 'z\fjb_323\addons\standortverwaltung\data\banner92.paa'] remoteExecCall ['setFlagTexture', _target];";
+            icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
           };
         };
   			class Flaggenmast_einholen {
@@ -85,7 +85,7 @@ class cfgVehicles {
     editorCategory = "fschjgbtl323_fleck";
     editorSubCategory = "logistik";
     faction = "Bundeswehr";
-    icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
     scope = 2;
     zumi_hubwagen_carryPosition[] = {-0.05,0,0.75};
     zumi_hubwagen_carryDirection = 90;
@@ -133,7 +133,7 @@ class cfgVehicles {
     editorCategory = "fschjgbtl323_fleck";
     editorSubCategory = "logistik";
     faction = "Bundeswehr";
-    icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
     scope = 2;
     zumi_hubwagen_carryPosition[] = {-0.05,0,0.75};
     zumi_hubwagen_carryDirection = 90;
@@ -194,7 +194,7 @@ class cfgVehicles {
     displayName = "Mobile Waffenkammer (Fleck)";
     editorCategory = "fschjgbtl323_fleck";
   	editorSubCategory = "munition";
-    icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
     scope = 2;
     class ACE_Actions: ACE_Actions {
       class waka {
@@ -214,7 +214,7 @@ class cfgVehicles {
     displayName = "Mobile Waffenkammer (Trope)";
     editorCategory = "fschjgbtl323_isaf";
     editorSubCategory = "munition";
-    icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
     scope = 2;
     class ACE_Actions: ACE_Actions {
       class waka {

@@ -68,10 +68,26 @@ class CfgVehicles {
   class WeaponHolder_Single_limited_weapon_F;
   class GVAR(weaponHolder): WeaponHolder_Single_limited_weapon_F {
    disableInventory = 1;
+   showWeaponCargo = 1;
+   isground = 1;
+   forceSupply = true;
+   maximumLoad = 9999;
+   transportMaxWeapons = 1;
+   transportMaxMagazines = 0;
    memoryPointSupply = "";
    supplyRadius = 0.1;
    getInRadius= 0.1;
-   showWeaponCargo = true;
+   class EventHandlers {
+     class GVAR(take) {
+       take = "params ['_unit', '_container', '_item']; private _itemcfg = _item call CBA_fnc_getItemConfig; _itemtype = [_itemcfg] call ace_common_fnc_getItemType; switch _itemtype do {case 'weapon' : {[_unit, _item] call CBA_fnc_removeWeapon; [_container, _item, 1, true] call CBA_fnc_addWeaponCargo;}; case 'item' : {[_unit, _item] call CBA_fnc_removeItem; [_container, _item, 1, true] call CBA_fnc_addItemCargo;}; case 'magazine' : {[_unit, _item] call CBA_fnc_removeMagazine; [_container, _item, 1, true] call CBA_fnc_addMagazineCargo;}; default {};};";
+     };
+     class GVAR(put) {
+       put = "params ['_unit', '_container', '_item']; private _itemcfg = _item call CBA_fnc_getItemConfig; _itemtype = [_itemcfg] call ace_common_fnc_getItemType; switch _itemtype do {case 'weapon' : {[_container, _item] call CBA_fnc_removeWeapon; [_unit, _item, 1, true] call CBA_fnc_addWeaponCargo;}; case 'item' : {[_container, _item] call CBA_fnc_removeItem; [_unit, _item, 1, true] call CBA_fnc_addItemCargo;}; case 'magazine' : {[_container, _item] call CBA_fnc_removeMagazine; [_unit, _item, 1, true] call CBA_fnc_addMagazineCargo;}; default {};};";
+     };
+     class GVAR(deleted) {
+       deleted = "params ['_entity']; private _attachedTo = attachedTo _entity; if (!isNull _attachedTo) then {_attachedTo setVariable ['waffe_angehangen', []];};";
+     };
+   };
   };
 
   class Vest_Base_F;

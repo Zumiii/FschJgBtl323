@@ -23,7 +23,6 @@ class CfgPatches {
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {
       "ace_common",
-      "ace_common",
       "bwa3_common",
       "bwa3_g36",
       "bwa3_g38",

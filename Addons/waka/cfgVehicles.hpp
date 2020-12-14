@@ -91,6 +91,7 @@ class cfgVehicles {
     linkedItems[] = {"fjb_323_equipment_Tragegurt","PBW_Helm4_fleck_H","ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged"};
   };
 
+/*
   class 323_mg_eins: 323_schuetze_base {
     displayName = "MG-Schütze";
     scope = 2;
@@ -112,7 +113,7 @@ class cfgVehicles {
     items[] = {"ACE_quikclot","ACE_quikclot","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_tourniquet","ACE_tourniquet","rhs_googles_black","ACE_epinephrine","ACE_morphine","ACE_splint","ACE_MapTools","ACE_Flashlight_KSF1","BWA3_Beret_Falli","PBW_muetze1_fleck","ACE_quikclot","ACE_quikclot","ACE_epinephrine","ACE_morphine","ACE_packingBandage","ACE_packingBandage","ACE_tourniquet","ACE_tourniquet","ACE_EntrenchingTool"};
     linkedItems[] = {"fjb_323_equipment_Tragegurt","PBW_Helm4_fleck_H","ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged"};
   };
-
+*/
   class 323_grapi: 323_schuetze_base {
     displayName = "Schütze (Grapi)";
     scope = 2;
