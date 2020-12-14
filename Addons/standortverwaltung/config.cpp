@@ -4,6 +4,7 @@ class CfgPatches {
   class ADDON {
     name = COMPONENT_NAME;
     units[] = {
+      GVAR(Fennek),
       GVAR(Flag),
       GVAR(Dixie_1),
       GVAR(Dixie_2),

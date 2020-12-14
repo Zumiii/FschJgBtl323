@@ -1,6 +1,22 @@
 class CBA_Extended_EventHandlers;
 
 class cfgVehicles {
+
+
+  class I_MRAP_03_F;
+  class GVAR(Fennek): I_MRAP_03_F {
+    author = "Zumi";
+    displayName = "Fennek";
+    editorCategory = "fschjgbtl323_fleck";
+  	editorSubCategory = "Fuefu";
+    faction = "Bundeswehr";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
+    scope = 2;
+    hiddenSelectionsTextures[] = {"z\fjb_323\addons\standortverwaltung\data\fennek_co.paa"};
+    class EventHandlers;
+    class ACE_Actions;
+  };
+
   class FlagCarrier;
   class Flag_NATO_F: FlagCarrier {
       class EventHandlers;
