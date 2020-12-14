@@ -37,7 +37,7 @@ class cfgVehicles {
 		editorCategory = "fschjgbtl323_fleck";
 		editorSubCategory = "stosa";
 		faction = "Bundeswehr";
-		icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+		icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
     zumi_hubwagen_carryPosition[] = {0,0,0};
     zumi_hubwagen_carryDirection = 90;
     class EventHandlers {
@@ -59,7 +59,7 @@ class cfgVehicles {
     editorCategory = "fschjgbtl323_fleck";
     editorSubCategory = "stosa";
     faction = "Bundeswehr";
-    icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
     nameSound = "obj_building";
     zumi_hubwagen_carryPosition[] = {0,0,0.25};
     zumi_hubwagen_carryDirection = 90;
@@ -81,7 +81,7 @@ class cfgVehicles {
     editorCategory = "fschjgbtl323_fleck";
     editorSubCategory = "stosa";
     faction = "Bundeswehr";
-    icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+    icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
     class ACE_Actions {
       class ACE_MainActions {
         condition = "true";

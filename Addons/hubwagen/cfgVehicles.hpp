@@ -22,7 +22,7 @@ class CfgVehicles {
 		editorCategory = "fschjgbtl323_fleck";
 		editorSubCategory = "logistik";
 		faction = "Bundeswehr";
-		icon = "z\fjb_323\addons\standortverwaltung\data\banner.paa";
+		icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
 		scope = 2;
 		class ACE_Actions {
 			class ACE_MainActions {
