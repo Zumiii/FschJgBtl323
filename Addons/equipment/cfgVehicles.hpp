@@ -47,10 +47,63 @@ class CfgVehicles {
             statement = "[_player, 'PutDown'] call ace_common_fnc_doGesture; [_player, 'fjb_323_equipment_fliegerzeichen_rot'] call CBA_fnc_removeItem; _pos = _player getPos [1, getDir _player]; _tarp = createVehicle ['fjb_323_equipment_fliegerzeichen_rot', [_pos select 0, _pos select 1, 0.01], [], 0, 'CAN_COLLIDE']; _tarp setDir getDir _player; _tarp setVectorUp (surfacenormal (position _tarp));";
           };
 
+          class schlafsack {
+            condition = "([_player, 'fjb_323_equipment_schlafsack'] call ace_common_fnc_hasItem)";
+            displayName = "Schlafsack ausbreiten";
+            icon = "\z\fjb_323\addons\equipment\ui\schlafsack.paa";
+            statement = "[_player, 'PutDown'] call ace_common_fnc_doGesture; [_player, 'fjb_323_equipment_schlafsack'] call CBA_fnc_removeItem; _pos = _player getPos [1, getDir _player]; _sack = createVehicle ['fjb_323_equipment_schlafsack', [_pos select 0, _pos select 1, 0.01], [], 0, 'CAN_COLLIDE']; _sack setDir getDir _player; _sack setVectorUp (surfacenormal (position _sack));";
+          };
+
         };
 
       };
   };
+
+  class Land_Sleeping_bag_F;
+
+  class GVAR(schlafsack_base): Land_Sleeping_bag_F {
+    scope = 0;
+    scopeCurator = 0;
+    class EventHandlers;
+    class Ace_Actions;
+  };
+
+  class GVAR(schlafsack): GVAR(schlafsack_base) {
+    author = "Zumi";
+    displayName = "Schlafsack";
+    editorCategory = "fschjgbtl323_fleck";
+    editorSubCategory = "munition";
+    scope = 2;
+    scopeCurator = 2;
+    ace_cargo_canLoad = 1;
+    ace_cargo_size = 1;
+    class EventHandlers: EventHandlers {
+      init = "params ['_sack']; [_sack, 'tarp'] call CBA_fnc_globalSay3d; _cutter = createVehicle ['Land_ClutterCutter_medium_F', getPosATL _sack, [], 0, 'CAN_COLLIDE']; [{deleteVehicle (_this select 0);}, [_cutter], 1] call CBA_fnc_waitAndExecute;";
+    };
+    class ACE_Actions: ACE_Actions {
+      class pickup {
+        displayName = "Schlafsack packen";
+        distance = 2;
+        icon = "\z\fjb_323\addons\equipment\ui\schlafsack.paa";
+        position = "[0,-1,0]";
+        showDisabled = 1;
+        condition = "true";
+        statement = "[_player, 'PutDown'] call ace_common_fnc_doGesture; [_player, _target] call ace_common_fnc_claim; [_target, 'tarp'] call CBA_fnc_globalSay3d; [{deleteVehicle (_this select 1); [(_this select 0), 'fjb_323_equipment_schlafsack', true] call CBA_fnc_addItem;}, [_player, _target], 1] call CBA_fnc_waitAndExecute;";
+        exceptions[] = {"isNotSwimming"};
+      };
+      class sleep {
+        displayName = "Ausruhen";
+        distance = 2;
+        icon = "\z\fjb_323\addons\equipment\ui\schlafsack.paa";
+        position = "[0,1,0]";
+        showDisabled = 1;
+        condition = "true";
+        statement = "[_player, _target] call fjb_323_equipment_fnc_sleep;";
+        exceptions[] = {"isNotSwimming"};
+      };
+    };
+  };
+
 
   class B_RadioBag_01_Black_F;
   class GVAR(funker_rucksack): B_RadioBag_01_Black_F {

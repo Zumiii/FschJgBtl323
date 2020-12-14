@@ -50,7 +50,25 @@ class cfgWeapons {
     };
   };
 
+
   class ACE_personalAidKit;
+
+
+  class GVAR(schlafsack): ACE_personalAidKit {
+    author = "Zumi";
+    displayName = "Schlafsack";
+    descriptionShort = "Wenn alle Spieler schlafen, wachen alle um 6 Uhr morgens auf.";
+    model = "\A3\Structures_F\Civ\Camping\Sleeping_bag_folded_F.p3d";
+    picture = "\z\fjb_323\addons\equipment\ui\schlafsack.paa";
+    scope = 2;
+    class itemInfo {
+      allowedSlots[] = {901};
+      mass = 30;
+      type = 620;
+      scope = 0;
+    };
+  };
+
   class GVAR(taschenkarte_9): ACE_personalAidKit {
     author = "Zumi";
     displayName = "Taschenkarte Nummer 9";

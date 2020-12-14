@@ -12,17 +12,22 @@ class CfgPatches {
       GVAR(fauler_knecht),
       GVAR(fliegerzeichen_gelb_base),
       GVAR(fliegerzeichen_rot_base),
+      GVAR(schlafsack_base),
+      GVAR(schlafsack),
       GVAR(fliegerzeichen_gelb),
       GVAR(fliegerzeichen_rot)
     };
     weapons[] = {
       GVAR(Tragegurt),
+      GVAR(schlafsack),
       GVAR(taschenkarte_9),
       GVAR(taschenkarte_11),
       GVAR(fauler_knecht),
+      GVAR(schlafsack),
       GVAR(fliegerzeichen_gelb),
       GVAR(fliegerzeichen_rot)
     };
+
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {
       "ace_common"

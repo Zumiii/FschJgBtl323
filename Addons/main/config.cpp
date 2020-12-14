@@ -8,7 +8,7 @@ class CfgPatches {
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {"cba_main","ace_common"};
     author = "Zumi";
-    url = "www.fallschirmjgbtl-323.de";
+    url = "";
     VERSION_CONFIG;
   };
 };
@@ -21,7 +21,7 @@ class CfgMods {
         hidePicture = "true";
         hideName = "true";
         actionName = "Website";
-        action = "www.fallschirmjgbtl-323.de";
+        action = "";
         description = "Github: https://github.com/Zumiii/FschJgBtl323/Issues";
     };
 };

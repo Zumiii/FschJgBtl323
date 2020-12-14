@@ -3,11 +3,38 @@
 
 if isServer then {
 
+	["player_sleeping",{
+		params ["_cba_missionTime"];
+		if (scanning_for_sleepers) exitWith {};
+		scanning_for_sleepers = true;
 
+		[
+			{
+				params ["_cba_missionTime"];
+				(_cba_missionTime + 60 >= cba_missionTime) || ({(_x getVariable ["asleep", 0]) <= 0} count ([] call cba_fnc_players) < 1);
+			},
+			{
+				params ["_cba_missionTime"];
+				scanning_for_sleepers = false;
+				if ({(_x getVariable ["asleep", 0]) <= 0} count ([] call cba_fnc_players) < 1) then {
+					skipTime (6 - daytime + 24) % 24;
+					["wakeup", []] call CBA_fnc_globalEvent;
+				};
+			},
+			[_cba_missionTime]
+		] call CBA_fnc_waitUntilAndExecute;
+	}] call CBA_fnc_addEventHandler;
 
 };
 
 if (hasInterface) then {
+
+
+	["wakeup",{
+		ace_player setVariable ["asleep", 0];
+		publicVariableServer "asleep";
+		ace_player setVariable ["awake", true];
+	}] call CBA_fnc_addEventHandler;
 
 	taschenkarten = [[1,7],[1,1],[1,9]];
 

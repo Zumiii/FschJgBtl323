@@ -14,7 +14,7 @@ class cfgVehicles {
   	editorSubCategory = "Ausbildung";
     icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
     class EventHandlers: EventHandlers {
-      init = "(_this select 0) setFlagTexture 'z\fjb_323\addons\standortverwaltung\data\banner92.paa'; (_this select 0) setVariable ['flagge', 1, true];";
+      init = "(_this select 0) setFlagTexture 'z\fjb_323\addons\standortverwaltung\data\flagge92.paa'; (_this select 0) setVariable ['flagge', 1, true];";
       class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
     };
     class ACE_Actions: ACE_Actions {
@@ -53,8 +53,8 @@ class cfgVehicles {
           };
           class Flagge_323 {
             displayName = "323";
-            statement = "[_target, 'z\fjb_323\addons\standortverwaltung\data\banner92.paa'] remoteExecCall ['setFlagTexture', _target];";
-            icon = "z\fjb_323\addons\standortverwaltung\data\banner92.paa";
+            statement = "[_target, 'z\fjb_323\addons\standortverwaltung\data\flagge92.paa'] remoteExecCall ['setFlagTexture', _target];";
+            icon = "z\fjb_323\addons\standortverwaltung\data\flagge92.paa";
           };
         };
   			class Flaggenmast_einholen {
